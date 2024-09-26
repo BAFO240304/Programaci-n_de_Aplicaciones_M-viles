@@ -91,45 +91,9 @@
             <tbody>
                 <tr>
                     <td>Tema 1</td>
-                    <td>Instalación de Flutter</td>
+                    <td>Ejercicios</td>
                     <td>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver detalles
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tema 2</td>
-                    <td>Hola Mundo en Dart</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
-                            Ver detalles
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tema 3 - Ejercicio 1</td>
-                    <td>Descripción del ejercicio 1</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
-                            Ver detalles
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tema 3 - Ejercicio 2</td>
-                    <td>Descripción del ejercicio 2</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
-                            Ver detalles
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Tema 3 - Ejercicio 3</td>
-                    <td>Descripción del ejercicio 3</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
                             Ver detalles
                         </button>
                     </td>
@@ -137,113 +101,28 @@
             </tbody>
         </table>
     
-        <!-- Modales -->
-        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí va el contenido detallado del tema 1.
-                        <pre><code>&lt;html&gt;<br>
-        &lt;head&gt;<br>
-            &lt;title&gt;Ejemplo de Código&lt;/title&gt;<br>
-        &lt;/head&gt;<br>
-        &lt;body&gt;<br>
-            &lt;h1&gt;Hola Mundo&lt;/h1&gt;<br>
-        &lt;/body&gt;<br>
-    &lt;/html&gt;</code></pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
+      <!-- Modal para Tema 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="mt-4">Visualizar Documento</h2>
+                <iframe src="semana3.pdf" style="width: 100%; height: 600px;" frameborder="0">
+                    Este navegador no soporta iframes. 
+                    <a href="semana3.pdf">Descargar el documento aquí</a>.
+                </iframe>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
-    
-        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel2">Detalles del Tema 2</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí va el contenido detallado del tema 2.
-                        <pre><code>&lt;style&gt;<br>
-        body {<br>
-            background-color: #f0f0f0;<br>
-        }<br>
-    &lt;/style&gt;</code></pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel3">Detalles del Tema 3 - Ejercicio 1</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí va el contenido detallado del tema 3 - Ejercicio 1.
-                        <pre><code>&lt;script&gt;<br>
-        console.log('Hola Mundo');<br>
-    &lt;/script&gt;</code></pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel4">Detalles del Tema 3 - Ejercicio 2</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí va el contenido detallado del tema 3 - Ejercicio 2.
-                        <pre><code>&lt;script&gt;<br>
-        console.log('Ejercicio 2');<br>
-    &lt;/script&gt;</code></pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel5">Detalles del Tema 3 - Ejercicio 3</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Aquí va el contenido detallado del tema 3 - Ejercicio 3.
-                        <pre><code>&lt;script&gt;<br>
-        console.log('Ejercicio 3');<br>
-    &lt;/script&gt;</code></pre>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+</div>
+
     </main>
     
     
