@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Web Moderna con Menú Desplegable</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        /* Estilos personalizados */
+        .navbar {
+            display: flex;
+            justify-content: space-between; /* Espacio entre logo y opciones */
+            align-items: center; /* Alinear verticalmente */
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center; /* Centrar verticalmente el logo */
+        }
+        .me-2{
+            margin-left: 15px;
+        }
+        .navbar-collapse{
+            margin-right: 30px;
+        }
+        .navbar-nav {
+            flex-direction: row; /* Alinear elementos en fila */
+        }
+        .nav-item {
+            margin-left: 20px; /* Espaciado entre los elementos del menú */
+        }
+        .navbar-toggler {
+            margin-left: auto; /* Alinear el botón de menú a la derecha */
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://via.placeholder.com/50" alt="Logo" class="me-2">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                        <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+                            <li><a class="dropdown-item" href="semana1.html">Semana 1</a></li>
+                            <li><a class="dropdown-item" href="semana2.html">Semana 2</a></li>
+                            <li><a class="dropdown-item" href="semana3.html">Semana 3</a></li>
+                            <li><a class="dropdown-item" href="semana4.html">Semana 4</a></li>
+                            <li><a class="dropdown-item" href="semana5.html">Semana 5</a></li>
+                            <li><a class="dropdown-item" href="semana6.html">Semana 6</a></li>
+                            <li><a class="dropdown-item" href="semana7.html">Semana 7</a></li>
+                            <li><a class="dropdown-item" href="semana8.html">Semana 8</a></li>
+                            <li><a class="dropdown-item" href="semana9.html">Semana 9</a></li>
+                            <li><a class="dropdown-item" href="semana10.html">Semana 10</a></li>
+                            <li><a class="dropdown-item" href="semana11.html">Semana 11</a></li>
+                            <li><a class="dropdown-item" href="semana12.html">Semana 12</a></li>
+                            <li><a class="dropdown-item" href="semana13.html">Semana 13</a></li>
+                            <li><a class="dropdown-item" href="semana14.html">Semana 14</a></li>
+                            <li><a class="dropdown-item" href="semana15.html">Semana 15</a></li>
+                            <li><a class="dropdown-item" href="semana16.html">Semana 16</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <h1 class="mb-4">Semana 5</h1>
+    
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Tema</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tema 1</td>
+                    <td>Instalación de Flutter</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
+                            Ver detalles
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tema 2</td>
+                    <td>Hola Mundo en Dart</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+                            Ver detalles
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tema 3 - Ejercicio 1</td>
+                    <td>Descripción del ejercicio 1</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+                            Ver detalles
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tema 3 - Ejercicio 2</td>
+                    <td>Descripción del ejercicio 2</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
+                            Ver detalles
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tema 3 - Ejercicio 3</td>
+                    <td>Descripción del ejercicio 3</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal5">
+                            Ver detalles
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <!-- Modales -->
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido detallado del tema 1.
+                        <pre><code>&lt;html&gt;<br>
+        &lt;head&gt;<br>
+            &lt;title&gt;Ejemplo de Código&lt;/title&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+            &lt;h1&gt;Hola Mundo&lt;/h1&gt;<br>
+        &lt;/body&gt;<br>
+    &lt;/html&gt;</code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel2">Detalles del Tema 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido detallado del tema 2.
+                        <pre><code>&lt;style&gt;<br>
+        body {<br>
+            background-color: #f0f0f0;<br>
+        }<br>
+    &lt;/style&gt;</code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel3">Detalles del Tema 3 - Ejercicio 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido detallado del tema 3 - Ejercicio 1.
+                        <pre><code>&lt;script&gt;<br>
+        console.log('Hola Mundo');<br>
+    &lt;/script&gt;</code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel4">Detalles del Tema 3 - Ejercicio 2</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido detallado del tema 3 - Ejercicio 2.
+                        <pre><code>&lt;script&gt;<br>
+        console.log('Ejercicio 2');<br>
+    &lt;/script&gt;</code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="modal fade" id="modal5" tabindex="-1" aria-labelledby="modalLabel5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel5">Detalles del Tema 3 - Ejercicio 3</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Aquí va el contenido detallado del tema 3 - Ejercicio 3.
+                        <pre><code>&lt;script&gt;<br>
+        console.log('Ejercicio 3');<br>
+    &lt;/script&gt;</code></pre>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Incluye Bootstrap Bundle JS desde un CDN -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
