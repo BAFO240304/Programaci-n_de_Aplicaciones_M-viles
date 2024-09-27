@@ -7,17 +7,17 @@
     <title>Página Web Moderna con Menú Desplegable</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Enlace a Bootstrap Icons -->
 </head>
+
 <body>
     <header class="bg-dark text-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">
                 <img src="https://via.placeholder.com/50" alt="Logo" class="me-2">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,8 +26,7 @@
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
                         <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
                             <li><a class="dropdown-item" href="semana1.html">Semana 1</a></li>
                             <li><a class="dropdown-item" href="semana2.html">Semana 2</a></li>
@@ -48,13 +47,58 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contacto</a>
+                        <a class="nav-link" href="https://hopp.bio/brad-andrew-flores-olivares" target="_blank">
+                            <i class="bi bi-person"></i> Perfil
+                        </a>
                     </li>
+                    
                 </ul>
             </div>
         </nav>
     </header>
     <main class="container">
+        <h1 class="mb-4 text-center" id="ejercicios_semana3">Semana 3</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tema</th>
+                        <th>Documento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ejercicios</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modal1">
+                                Ver detalles
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="mt-4">Visualizar Documento</h2>
+                        <iframe src="pdf/semana3.pdf" style="width: 100%; height: 600px;" frameborder="0">
+                            Este navegador no soporta iframes.
+                            <a href="pdf/semana3.pdf">Descargar el documento aquí</a>.
+                        </iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section>
             <h3>
                 Ejercicio 1:
@@ -70,11 +114,12 @@
             </p>
             <div class="header-container">
                 <h4>Codigo:</h4>
-                <a class="boton_gif" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/semana3/ejercicio1.dart" target="_blank"><b>Codigo en Gif Hub</b></a>
-                <a class="boton_gif" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles" target="_blank"><b>Repositorio</b></a>
+                <a class="boton_gif"
+                    href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/semana3/ejercicio1.dart"
+                    target="_blank"><b>Codigo en Gif Hub</b></a>
                 <i class="bi bi-clipboard icono-copiar" onclick="copiarCodigo(1)" title="Copiar código">copiar</i>
             </div>
-            <pre id="codigo1">
+            <pre id="codigo1" style="background-color: black; color: white;">
                 <code>
 import 'dart:math';
 import 'dart:io';
@@ -126,11 +171,12 @@ void main() {
             </p>
             <div class="header-container">
                 <h4>Código:</h4>
-                <a class="boton_gif" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/semana3/ejercicio2.dart" target="_blank"><b>Codigo en Gif Hub</b></a>
-                <a class="boton_gif" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles" target="_blank"><b>Repositorio</b></a>
+                <a class="boton_gif"
+                    href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/semana3/ejercicio2.dart"
+                    target="_blank"><b>Codigo en Gif Hub</b></a>
                 <i class="bi bi-clipboard icono-copiar" onclick="copiarCodigo(2)" title="Copiar código">copiar</i>
             </div>
-            <pre id="codigo2">
+            <pre id="codigo2" style="background-color: black; color: white;">
                 <code>
                     import 'dart:io';
                     void main() {
@@ -202,11 +248,12 @@ void main() {
             </p>
             <div class="header-container">
                 <h4>Código:</h4>
-                <a class="boton_gif" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/semana3/ejercicio3.dart" target="_blank"><b>Codigo en Gif Hub</b></a>
-                <a  class="boton_gif" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles" target="_blank"><b>Repositorio</b></a>
+                <a class="boton_gif"
+                    href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/semana3/ejercicio3.dart"
+                    target="_blank"><b>Codigo en Gif Hub</b></a>
                 <i class="bi bi-clipboard icono-copiar" onclick="copiarCodigo(3)" title="Copiar código">copiar</i>
             </div>
-            <pre id="codigo3">
+            <pre id="codigo3" style="background-color: black; color: white;">
                 <code>
                     import 'dart:io';
                     void main() {
@@ -231,67 +278,26 @@ void main() {
             </pre>
             <div class="mensaje-copiado" id="mensajeCopiado3">¡Código copiado al portapapeles!</div>
         </section>
-        <h1 class="mb-4 text-center" id="ejercicios_semana3">Semana 3</h1>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead class="table-light">
-                    <tr>
-                        <th>Tema</th>
-                        <th>Documento</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Ejercicios</td>
-                        <td>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#modal1">
-                                Ver detalles
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h2 class="mt-4">Visualizar Documento</h2>
-                        <iframe src="pdf/semana3.pdf" style="width: 100%; height: 600px;" frameborder="0">
-                            Este navegador no soporta iframes.
-                            <a href="pdf/semana3.pdf">Descargar el documento aquí</a>.
-                        </iframe>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
 </body>
+
 </html>
 
 <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        function copiarCodigo(numero) {
-            const codigo = document.getElementById(`codigo${numero}`).innerText;
-            navigator.clipboard.writeText(codigo).then(() => {
-                const mensaje = document.getElementById(`mensajeCopiado${numero}`);
-                mensaje.style.display = "block";
-                setTimeout(() => {
-                    mensaje.style.display = "none";
-                }, 3000);
-            }).catch(err => {
-                console.error("Error al copiar el código: ", err);
-            });
-        }
-    </script>
+<script>
+    function copiarCodigo(numero) {
+        const codigo = document.getElementById(`codigo${numero}`).innerText;
+        navigator.clipboard.writeText(codigo).then(() => {
+            const mensaje = document.getElementById(`mensajeCopiado${numero}`);
+            mensaje.style.display = "block";
+            setTimeout(() => {
+                mensaje.style.display = "none";
+            }, 3000);
+        }).catch(err => {
+            console.error("Error al copiar el código: ", err);
+        });
+    }
+</script>
