@@ -1,46 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Web Moderna con Menú Desplegable</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <style>
-        /* Estilos personalizados */
-        .navbar {
-            display: flex;
-            justify-content: space-between; /* Espacio entre logo y opciones */
-            align-items: center; /* Alinear verticalmente */
-        }
-        .navbar-brand {
-            display: flex;
-            align-items: center; /* Centrar verticalmente el logo */
-        }
-        .me-2{
-            margin-left: 15px;
-        }
-        .navbar-collapse{
-            margin-right: 30px;
-        }
-        .navbar-nav {
-            flex-direction: row; /* Alinear elementos en fila */
-        }
-        .nav-item {
-            margin-left: 20px; /* Espaciado entre los elementos del menú */
-        }
-        .navbar-toggler {
-            margin-left: auto; /* Alinear el botón de menú a la derecha */
-        }
-    </style>
+    <script defer src="js/ejercicio1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Enlace a Bootstrap Icons -->
 </head>
+
 <body>
     <header class="bg-dark text-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">
                 <img src="https://via.placeholder.com/50" alt="Logo" class="me-2">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -49,7 +28,8 @@
                         <a class="nav-link" href="index.html">Inicio</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Proyectos</a>
                         <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
                             <li><a class="dropdown-item" href="semana1.html">Semana 1</a></li>
                             <li><a class="dropdown-item" href="semana2.html">Semana 2</a></li>
@@ -76,61 +56,238 @@
             </div>
         </nav>
     </header>
-    
     <main class="container">
-        <h1 class="mb-4">Semana 3</h1>
-    
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Tema</th>
-                    <th>Descripción</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Tema 1</td>
-                    <td>Ejercicios</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal1">
-                            Ver detalles
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    
-      <!-- Modal para Tema 1 -->
-<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <section>
+            <h3>
+                Ejercicio 1:
+            </h3>
+            <p>
+                Diseñe un programa en Lenguaje Dart que determine el área total (A) y el volumen (V)
+                de un cilindro del que se conoce su radio (r) y su altura (h). Considere las siguientes
+                fórmulas:
+                <br>
+                𝐴 = 2𝜋𝑟(𝑟+ℎ)
+                <br>
+                𝑉 = 𝜋 𝑟 2 ℎ
+            </p>
+            <div class="header-container">
+                <h4>Codigo:</h4>
+                <i class="bi bi-clipboard icono-copiar" onclick="copiarCodigo(1)" title="Copiar código"></i>
             </div>
-            <div class="modal-body">
-                <h2 class="mt-4">Visualizar Documento</h2>
-                <iframe src="semana3.pdf" style="width: 100%; height: 600px;" frameborder="0">
-                    Este navegador no soporta iframes. 
-                    <a href="semana3.pdf">Descargar el documento aquí</a>.
-                </iframe>
+            <pre id="codigo1">
+                <code>
+import 'dart:math';
+import 'dart:io';
+
+void main() {
+  stdout.write('Ingresa el radio del cilindro: ');
+  double radio = double.parse(stdin.readLineSync()!);
+  stdout.write('Ingresa la altura del cilindro: ');
+  double altura = double.parse(stdin.readLineSync()!);
+  double areaTotal = 2 * pi * radio * (radio + altura);
+  double volumen = pi * pow(radio, 2) * altura;
+  print('El área total del cilindro es: ${areaTotal.toStringAsFixed(2)}');
+  print('El volumen del cilindro es: ${volumen.toStringAsFixed(2)}');
+}
+                </code>
+            </pre>
+            <div class="mensaje-copiado" id="mensajeCopiado1">¡Código copiado al portapapeles!</div>
+        </section>
+        <br>
+        <br>
+        <section>
+            <h3>
+                Ejercicio 2:
+            </h3>
+            <p>
+                Un padre repartirá una cantidad de dinero entre sus cinco hijos. Cada uno recibirá una
+                cantidad equivalente a:
+            <ul>
+                <li>
+                    Tamar: 85% del monto recibido por Josué
+                </li>
+                <li>
+                    Josué: 27% de la cantidad a repartir
+                </li>
+                <li>
+                    Caleb: 23% del monto total recibido entre Josué y Daniel
+                </li>
+                <li>
+                    Daniel: 25% de la cantidad a repartir
+                </li>
+                <li>
+                    David: lo que queda del dinero a repartir Dada la cantidad de dinero a repartir,
+                    diseñe un programa en lenguaje Dart que determine cuánto de dinero recibirá cada
+                    hijo.
+                </li>
+            </ul>
+            Diseñe un programa en lenguaje Dart que determine cuánto de dinero recibirá cada
+            hijo.
+            </p>
+            <div class="header-container">
+                <h4>Código:</h4>
+                <i class="bi bi-clipboard icono-copiar" onclick="copiarCodigo(2)" title="Copiar código"></i>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <pre id="codigo2">
+                <code>
+                    import 'dart:io';
+                    void main() {
+                      stdout.write('Ingresa la cantidad total de dinero a repartir: ');
+                      double totalDinero = double.parse(stdin.readLineSync()!);
+                      double josue = totalDinero * 0.27;
+                      double daniel = totalDinero * 0.25;
+                      double caleb = (josue + daniel) * 0.23;
+                      double tamar = josue * 0.85;
+                      double david = totalDinero - (josue + daniel + caleb + tamar);
+                      print('\nReparto de dinero entre los hijos:');
+                      print('Tamar recibirá: \$${tamar.toStringAsFixed(2)}');
+                      print('Josué recibirá: \$${josue.toStringAsFixed(2)}');
+                      print('Caleb recibirá: \$${caleb.toStringAsFixed(2)}');
+                      print('Daniel recibirá: \$${daniel.toStringAsFixed(2)}');
+                      print('David recibirá: \$${david.toStringAsFixed(2)}');
+                    }
+                    
+                </code>
+            </pre>
+            <div class="mensaje-copiado" id="mensajeCopiado2">¡Código copiado al portapapeles!</div>
+        </section>
+        <br>
+        <br>
+        <section>
+            <h3>Ejercicio 3:</h3>
+            <p>
+                La empresa “Juanito Import” SAC expondrá sus productos en una feria. La empresa
+                considera que el monto total de dinero a invertir estará distribuido de la siguiente
+                manera:
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Rubro</th>
+                            <th>Porcentaje</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alquiler de espacio en la feria</td>
+                            <td>23%</td>
+                        </tr>
+                        <tr>
+                            <td>Publicidad</td>
+                            <td>7%</td>
+                        </tr>
+                        <tr>
+                            <td>Transporte</td>
+                            <td>26%</td>
+                        </tr>
+                        <tr>
+                            <td>Servicios feriales</td>
+                            <td>12%</td>
+                        </tr>
+                        <tr>
+                            <td>Decoración</td>
+                            <td>21%</td>
+                        </tr>
+                        <tr>
+                            <td>Gastos varios</td>
+                            <td>11%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            Dado el monto total de dinero a invertir, implemente un programa que determine
+            cuánto gastará la empresa en cada rubro.
+            </p>
+            <div class="header-container">
+                <h4>Código:</h4>
+                <i class="bi bi-clipboard icono-copiar" onclick="copiarCodigo(3)" title="Copiar código"></i>
+            </div>
+            <pre id="codigo3">
+                <code>
+                    import 'dart:io';
+                    void main() {
+                      stdout.write('Ingresa el monto total de dinero a invertir: ');
+                      double totalDinero = double.parse(stdin.readLineSync()!);
+                      double alquiler = totalDinero * 0.23;
+                      double publicidad = totalDinero * 0.07;
+                      double transporte = totalDinero * 0.26;
+                      double serviciosFeriales = totalDinero * 0.12;
+                      double decoracion = totalDinero * 0.21;
+                      double gastosVarios = totalDinero * 0.11;
+                      print('\nDistribución del gasto en la feria:');
+                      print('Alquiler de espacio en la feria: \$${alquiler.toStringAsFixed(2)}');
+                      print('Publicidad: \$${publicidad.toStringAsFixed(2)}');
+                      print('Transporte: \$${transporte.toStringAsFixed(2)}');
+                      print('Servicios feriales: \$${serviciosFeriales.toStringAsFixed(2)}');
+                      print('Decoración: \$${decoracion.toStringAsFixed(2)}');
+                      print('Gastos varios: \$${gastosVarios.toStringAsFixed(2)}');
+                    }
+                    
+                </code>
+            </pre>
+            <div class="mensaje-copiado" id="mensajeCopiado3">¡Código copiado al portapapeles!</div>
+        </section>
+        <h1 class="mb-4 text-center">Semana 3</h1>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped">
+                <thead class="table-light">
+                    <tr>
+                        <th>Tema</th>
+                        <th>Documento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ejercicios</td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#modal1">
+                                Ver detalles
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel1">Detalles del Tema 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h2 class="mt-4">Visualizar Documento</h2>
+                        <iframe src="pdf/semana3.pdf" style="width: 100%; height: 600px;" frameborder="0">
+                            Este navegador no soporta iframes.
+                            <a href="pdf/semana3.pdf">Descargar el documento aquí</a>.
+                        </iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
     </main>
-    
-    
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Incluye Bootstrap Bundle JS desde un CDN -->
-    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copiarCodigo(numero) {
+            const codigo = document.getElementById(`codigo${numero}`).innerText;
+            navigator.clipboard.writeText(codigo).then(() => {
+                const mensaje = document.getElementById(`mensajeCopiado${numero}`);
+                mensaje.style.display = "block";
+                setTimeout(() => {
+                    mensaje.style.display = "none";
+                }, 3000);
+            }).catch(err => {
+                console.error("Error al copiar el código: ", err);
+            });
+        }
+    </script>
