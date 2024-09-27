@@ -67,14 +67,14 @@ code {
     padding: 15px;
     text-align: center; /* Alineación centrada */
 }
-a {
+.boton_gif {
     text-decoration: none;
     color: #5900ff; /* Color inicial del enlace */
     animation: parpadeo 1.5s infinite alternate; /* Animación de parpadeo */
     transition: color 0.3s ease; /* Transición suave para el hover */
 }
 
-a:hover {
+.boton_gif:hover {
     color: #3c70ac; /* Cambia el color del enlace al pasar el mouse */
 }
 

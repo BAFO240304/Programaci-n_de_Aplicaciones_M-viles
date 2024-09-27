@@ -7,30 +7,22 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
     <style>
-        /* Estilos personalizados */
-        .navbar {
-            display: flex;
-            justify-content: space-between; /* Espacio entre logo y opciones */
-            align-items: center; /* Alinear verticalmente */
+        #carouselExample {
+            margin-top: -20px;
+            width: 100% !important; /* Ajusta el ancho del carrusel al 100% */
+            height: 350px; /* Altura del carrusel */
         }
-        .navbar-brand {
-            display: flex;
-            align-items: center; /* Centrar verticalmente el logo */
+        .carousel-item {
+            height: 350px; /* Altura del carrusel */
         }
-        .me-2{
-            margin-left: 15px;
+        .carousel-item img {
+            object-fit: cover; /* Ajustar imagen para cubrir el área */
+            height: 100%; /* Mantener altura completa */
+            width: 100%; /* Mantener ancho completo */
         }
-        .navbar-collapse{
-            margin-right: 30px;
-        }
-        .navbar-nav {
-            flex-direction: row; /* Alinear elementos en fila */
-        }
-        .nav-item {
-            margin-left: 20px; /* Espaciado entre los elementos del menú */
-        }
-        .navbar-toggler {
-            margin-left: auto; /* Alinear el botón de menú a la derecha */
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad del texto */
+            border-radius: 10px; /* Bordes redondeados */
         }
     </style>
 </head>
@@ -76,48 +68,74 @@
             </div>
         </nav>
     </header>
+
+    <section id="cover" class="mb-4 position-relative">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/fondo1.png" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Introducción a Flutter</h5>
+                        <a href="semana1.html" class="btn btn-primary">Información</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/fondo2.jpg" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Guia de Instalación</h5>
+                        <p></p>
+                        <a href="semana2.html#instalacion" class="btn btn-primary">Ir al Guia de Instalación</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
     
     <main class="container my-4">
-        <section id="cover" class="mb-4" style="height: 350px; background-color: #f8f9fa; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-            <h1>Bienvenido a Mi Página</h1>
-        </section>
-        <section id="products" class="mb-4">
-            <h2>Productos</h2>
+        <section id="productos" class="mb-4">
+            <h2 style="text-align: center; padding: 20px;">Tareas Mandadas al teams</h2>
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 1">
+                        <img src="img/tema1.png" class="card-img-top" alt="Producto 1">
                         <div class="card-body">
-                            <h5 class="card-title">Producto 1</h5>
-                            <p class="card-text">Descripción breve del producto 1. Este producto es increíble por estas razones.</p>
-                            <a href="#" class="btn btn-dark">Ver Más</a>
+                            <h5 class="card-title">Infografia</h5>
+                            <p class="card-text">Realiza una infografía sobre un tema realizado en la semana 01</p>
+                            <a href="semana1.html#infografia" class="btn btn-dark">Ver Más</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 2">
+                        <img src="img/tema2.png" class="card-img-top" alt="Producto 2">
                         <div class="card-body">
-                            <h5 class="card-title">Producto 2</h5>
-                            <p class="card-text">Descripción breve del producto 2. Este producto destaca por su calidad y funcionalidad.</p>
-                            <a href="#" class="btn btn-dark">Ver Más</a>
+                            <h5 class="card-title">Instalación de Flutter</h5>
+                            <p class="card-text">Elabora un manual de instalación del lenguaje Dart</p>
+                            <a href="semana2.html#instalacion" class="btn btn-dark">Ver Más</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto 3">
+                        <img src="img/tema3.png" class="card-img-top" alt="Producto 3">
                         <div class="card-body">
-                            <h5 class="card-title">Producto 3</h5>
-                            <p class="card-text">Descripción breve del producto 3. Ideal para quienes buscan lo mejor en el mercado.</p>
-                            <a href="#" class="btn btn-dark">Ver Más</a>
+                            <h5 class="card-title">Realizar los siguientes ejercicios</h5>
+                            <p class="card-text">Realiza los proyectos formulados en el anexo utilizando un portafolio de ejercicios. </p>
+                            <a href="semana3.html#ejercicios_semana3" class="btn btn-dark">Ver Más</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
     
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
