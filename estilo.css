@@ -67,6 +67,25 @@ code {
     padding: 15px;
     text-align: center; /* Alineación centrada */
 }
+a {
+    text-decoration: none;
+    color: #5900ff; /* Color inicial del enlace */
+    animation: parpadeo 1.5s infinite alternate; /* Animación de parpadeo */
+    transition: color 0.3s ease; /* Transición suave para el hover */
+}
+
+a:hover {
+    color: #3c70ac; /* Cambia el color del enlace al pasar el mouse */
+}
+
+@keyframes parpadeo {
+    0% {
+        opacity: 1; /* Opacidad inicial */
+    }
+    100% {
+        opacity: 0.5; /* Cambia la opacidad para el parpadeo */
+    }
+}
 
 .icono-copiar {
     cursor: pointer; /* Cambia el cursor al pasar sobre el icono */
