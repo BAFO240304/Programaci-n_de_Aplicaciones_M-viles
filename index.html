@@ -25,13 +25,62 @@
             background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para mejorar la legibilidad del texto */
             border-radius: 10px; /* Bordes redondeados */
         }
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.datos {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto para la animación */
+    transform: translateY(20px); /* Para el efecto de entrada */
+    animation: fadeInUp 0.6s forwards; /* Animación de entrada */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #4CAF50; /* Color verde */
+    transition: color 0.3s; /* Transición de color */
+}
+
+h1:hover {
+    color: #388E3C; /* Color más oscuro al pasar el ratón */
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .datos {
+        padding: 1rem;
+    }
+}
+
     </style>
 </head>
 <body>
     <header class="bg-dark text-white">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">
-                <img src="https://via.placeholder.com/50" alt="Logo" class="me-2">
+                <img src="img/logo.jpg" alt="Logo" class="me-2" style="width: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -72,7 +121,6 @@
             </div>
         </nav>
     </header>
-
     <section id="cover" class="mb-4 position-relative">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -102,7 +150,9 @@
             </button>
         </div>
     </section>
-    
+    <section class="Datos" ></section>
+        <h1>Flores Olivares Brad Andrew - Vespertino</h1>
+    </section>
     <main class="container my-4">
         <section id="productos" class="mb-4">
             <h2 style="text-align: center; padding: 20px;">Tareas Mandadas al teams</h2>
@@ -142,7 +192,7 @@
     </main>
     
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados a Flores Olivares Brad Andrew.</p>
     </footer>
 
     <!-- Incluye Bootstrap Bundle JS desde un CDN -->
