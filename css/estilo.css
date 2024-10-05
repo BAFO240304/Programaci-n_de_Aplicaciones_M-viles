@@ -1,0 +1,168 @@
+/* Estilos personalizados */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+/* Menú flotante circular */
+.floating-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #000000;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.floating-menu:hover {
+    background-color: #353535;
+    transform: scale(1.1);
+}
+
+/* Navegación lateral */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Mantiene el menú oculto inicialmente */
+    width: 250px;
+    height: 100%; /* Altura completa de la ventana */
+    background-color: #000000;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    color: white;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Activa el desplazamiento vertical */
+}
+
+.side-menu a {
+    padding: 15px 25px;
+    display: block;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: #575757;
+}
+
+.sub-item {
+    padding-left: 20px; /* Sangría para los subelementos */
+}
+
+/* Efecto de apertura del menú lateral */
+.side-menu.open {
+    left: 0; /* Mueve el menú a la vista cuando está abierto */
+}
+
+
+/* Animación del contenido principal */
+.content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.content.shifted {
+    margin-left: 250px; /* Ajusta el margen cuando el menú está abierto */
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+.main-section h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+.main-section p {
+    font-size: 1rem;
+    max-width: 600px;
+}
+/* Estilos personalizados para la sección de Flutter */
+.flutter-section {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 30px; /* Margen superior */
+}
+
+.flutter-section h2 {
+    color: #333; /* Color del título */
+}
+
+.flutter-section h3 {
+    margin-top: 20px; /* Margen superior para el subtítulo */
+    color: #007bff; /* Color azul */
+}
+
+.flutter-section pre {
+    background-color: #272b30; /* Fondo del bloque de código */
+    color: #f8f9fa; /* Color del texto del código */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    overflow-x: auto; /* Scroll horizontal si es necesario */
+}
+
+.flutter-section code {
+    font-family: 'Courier New', Courier, monospace; /* Fuente monoespaciada para el código */
+}
+.btn-custom {
+    background-color: #000000;
+    border-radius: 25px;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #2e2e2e;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .floating-menu {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-section p {
+        font-size: 1rem;
+    }
+
+    .content.shifted {
+        margin-left: 0; /* Mantiene el contenido alineado a la izquierda en móviles */
+    }
+
+    .side-menu {
+        width: 200px; /* Ajusta el tamaño en móviles */
+    }
+}

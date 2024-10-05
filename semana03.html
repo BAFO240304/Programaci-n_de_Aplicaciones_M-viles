@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Ejercicios de Programación en Dart</title>
+    <style>
+        /* Encabezado */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sección de ejercicios */
+        .exercise-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el encabezado del código */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header-container h4 {
+            margin: 0;
+        }
+
+        .boton_gif {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .boton_gif:hover {
+            background-color: #0056b3;
+        }
+
+        /* Icono de copiar */
+        .icono-copiar {
+            cursor: pointer;
+            color: #28a745;
+            margin-left: 10px;
+        }
+
+        /* Estilo para el área de código */
+        pre {
+            background-color: #272b30; /* Fondo del bloque de código */
+            color: #f8f9fa; /* Color del texto del código */
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap; /* Permite que el texto se ajuste al ancho */
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        /* Margen en secciones */
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+        h3{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Menú lateral con subcategorías -->
+<div id="sideMenu" class="side-menu">
+    <a href="index.html">Inicio</a>
+    <!-- Subcategoría Semanas -->
+    <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+    <div class="collapse" id="subMenuServicios">
+        <a href="semana01.html" class="sub-item">Semana 01</a>
+        <a href="semana02.html" class="sub-item">Semana 02</a>
+        <a href="semana03.html" class="sub-item">Semana 03</a>
+        <a href="semana04.html" class="sub-item">Semana 04</a>
+        <a href="semana05.html" class="sub-item">Semana 05</a>
+        <a href="semana06.html" class="sub-item">Semana 06</a>
+        <a href="semana07.html" class="sub-item">Semana 07</a>
+        <a href="semana08.html" class="sub-item">Semana 08</a>
+        <a href="semana09.html" class="sub-item">Semana 09</a>
+        <a href="semana10.html" class="sub-item">Semana 10</a>
+        <a href="semana11.html" class="sub-item">Semana 11</a>
+        <a href="semana12.html" class="sub-item">Semana 12</a>
+        <a href="semana13.html" class="sub-item">Semana 13</a>
+        <a href="semana14.html" class="sub-item">Semana 14</a>
+        <a href="semana15.html" class="sub-item">Semana 15</a>
+        <a href="semana16.html" class="sub-item">Semana 16</a>
+    </div>
+    <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
+</div>
+
+<!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+<div class="floating-menu" onclick="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"/>
+    </svg>
+</div>
+
+<!-- Contenido principal -->
+<div id="mainContent" class="content">
+    <!-- Ejercicio 1 -->
+    <section class="exercise-section container mt-5">
+        <div class="header-container">
+            <h3>Ejercicio 1:</h3>
+            <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                Ver PDF
+            </button>
+        </div>
+        <p>
+            Diseñe un programa en Lenguaje Dart que determine el área total (A) y el volumen (V) de un cilindro del que se conoce su radio (r) y su altura (h). Considere las siguientes fórmulas:
+            <br><br>
+            𝐴 = 2𝜋𝑟(𝑟+ℎ)
+            <br>
+            𝑉 = 𝜋 𝑟 2 ℎ
+        </p>
+        <div class="header-container">
+            <a style="text-decoration: none; color: #0056b3;" href="">Codigo en Gif Hub</a>
+            <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
+        </div>
+        <pre id="codigo1"><code>
+import 'dart:math';
+import 'dart:io';
+
+void main() {
+  stdout.write('Ingresa el radio del cilindro: ');
+  double radio = double.parse(stdin.readLineSync()!);
+  stdout.write('Ingresa la altura del cilindro: ');
+  double altura = double.parse(stdin.readLineSync()!);
+  double areaTotal = 2 * pi * radio * (radio + altura);
+  double volumen = pi * pow(radio, 2) * altura;
+  print('El área total del cilindro es: ${areaTotal.toStringAsFixed(2)}');
+  print('El volumen del cilindro es: ${volumen.toStringAsFixed(2)}');
+}
+        </code></pre>
+    </section>
+
+    <!-- Ejercicio 2 -->
+    <section class="exercise-section container mt-5">
+        <div class="header-container">
+            <h3>Ejercicio 2:</h3>
+        </div>
+        <p>
+            Un padre repartirá una cantidad de dinero entre sus cinco hijos. Cada uno recibirá una cantidad equivalente a:
+        </p>
+        <ul>
+            <li>
+                Tamar: 85% del monto recibido por Josué
+            </li>
+            <li>
+                Josué: 27% de la cantidad a repartir
+            </li>
+            <li>
+                Caleb: 23% del monto total recibido entre Josué y Daniel
+            </li>
+            <li>
+                Daniel: 25% de la cantidad a repartir
+            </li>
+            <li>
+                David: lo que queda del dinero a repartir Dada la cantidad de dinero a repartir, diseñe un programa en lenguaje Dart que determine cuánto de dinero recibirá cada hijo.
+            </li>
+        </ul>
+        <p>
+            Diseñe un programa en lenguaje Dart que determine cuánto de dinero recibirá cada hijo.
+        </p>
+        <br>
+        <div class="header-container">
+            <a style="text-decoration: none; color: #0056b3;" href="">Codigo en Gif Hub</a>
+            <span class="icono-copiar" onclick="copyCode('codigo2')">📋</span>
+        </div>
+        <pre id="codigo2"><code>
+import 'dart:io';
+void main() {
+  stdout.write('Ingresa la cantidad total de dinero a repartir: ');
+  double totalDinero = double.parse(stdin.readLineSync()!);
+  double josue = totalDinero * 0.27;
+  double daniel = totalDinero * 0.25;
+  double caleb = (josue + daniel) * 0.23;
+  double tamar = josue * 0.85;
+  double david = totalDinero - (josue + daniel + caleb + tamar);
+  print('\nReparto de dinero entre los hijos:');
+  print('Tamar recibirá: \$${tamar.toStringAsFixed(2)}');
+  print('Josué recibirá: \$${josue.toStringAsFixed(2)}');
+  print('Caleb recibirá: \$${caleb.toStringAsFixed(2)}');
+  print('Daniel recibirá: \$${daniel.toStringAsFixed(2)}');
+  print('David recibirá: \$${david.toStringAsFixed(2)}');
+}
+        </code></pre>
+    </section>
+
+    <!-- Ejercicio 3 -->
+    <section class="exercise-section container mt-5">
+        <div class="header-container">
+            <h3>Ejercicio 3:</h3>
+        </div>
+        <p>
+            La empresa “Juanito Import” SAC expondrá sus productos en una feria. La empresa considera que el monto total de dinero a invertir estará distribuido de la siguiente manera:
+        </p>
+        <div class="table-container">
+            <table class="table table-striped table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Rubro</th>
+                        <th scope="col">Porcentaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alquiler de espacio en la feria</td>
+                        <td>23%</td>
+                    </tr>
+                    <tr>
+                        <td>Publicidad</td>
+                        <td>7%</td>
+                    </tr>
+                    <tr>
+                        <td>Transporte</td>
+                        <td>26%</td>
+                    </tr>
+                    <tr>
+                        <td>Servicios feriales</td>
+                        <td>12%</td>
+                    </tr>
+                    <tr>
+                        <td>Decoración</td>
+                        <td>21%</td>
+                    </tr>
+                    <tr>
+                        <td>Gastos varios</td>
+                        <td>11%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            Dado el monto total de dinero a invertir, implemente un programa que determine cuánto gastará la empresa en cada rubro.
+        </p>   
+        <br>     
+        <div class="header-container">
+            <a style="text-decoration: none; color: #0056b3;" href="">Codigo en Gif Hub</a>
+            <span class="icono-copiar" onclick="copyCode('codigo3')">📋</span>
+        </div>
+        <pre id="codigo3"><code>
+import 'dart:io';
+void main() {
+  stdout.write('Ingresa el monto total de dinero a invertir: ');
+  double totalDinero = double.parse(stdin.readLineSync()!);
+  double alquiler = totalDinero * 0.23;
+  double publicidad = totalDinero * 0.07;
+  double transporte = totalDinero * 0.26;
+  double serviciosFeriales = totalDinero * 0.12;
+  double decoracion = totalDinero * 0.08;
+  double personal = totalDinero * 0.24;
+  print('El monto a invertir en cada rubro es:');
+  print('Alquiler: \$${alquiler.toStringAsFixed(2)}');
+  print('Publicidad: \$${publicidad.toStringAsFixed(2)}');
+  print('Transporte: \$${transporte.toStringAsFixed(2)}');
+  print('Servicios Feriales: \$${serviciosFeriales.toStringAsFixed(2)}');
+  print('Decoración: \$${decoracion.toStringAsFixed(2)}');
+  print('Personal: \$${personal.toStringAsFixed(2)}');
+}
+        </code></pre>
+    </section>
+
+</div>
+<!-- Modal para PDF -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">Descargar PDF</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Haz clic en el botón de abajo para descargar el archivo PDF.</p>
+                <a href="pdf/manual_instalacion.pdf" class="btn btn-success" download>Descargar PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- JavaScript para la funcionalidad de copiar -->
+<script>
+    function copyCode(id) {
+        const codeElement = document.getElementById(id);
+        const range = document.createRange();
+        range.selectNode(codeElement);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges(); // Desselecciona el texto
+        alert('Código copiado al portapapeles');
+    }
+
+    // Función para alternar el menú lateral
+    function toggleMenu() {
+        const sideMenu = document.getElementById('sideMenu');
+        sideMenu.classList.toggle('active');
+    }
+</script>
+
+
+<script src="js/menu.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

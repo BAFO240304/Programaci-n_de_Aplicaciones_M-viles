@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Semana 01</title>
+    <style>
+        /* Estilos personalizados */
+        .flutter-section {
+            background-color: #f8f9fa; /* Fondo claro */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+            margin-top: 30px; /* Margen superior */
+        }
+
+        .flutter-section h2, .flutter-section h3 {
+            color: #333; /* Color del texto */
+        }
+
+        .flutter-section pre {
+            background-color: #272b30; /* Fondo del bloque de código */
+            color: #f8f9fa; /* Color del texto del código */
+            padding: 15px; /* Espaciado interno */
+            border-radius: 4px; /* Bordes redondeados */
+            overflow-x: auto; /* Scroll horizontal si es necesario */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Menú lateral con subcategorías -->
+<div id="sideMenu" class="side-menu">
+    <a href="index.html">Inicio</a>
+    <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+    <div class="collapse" id="subMenuServicios">
+        <a href="semana01.html" class="sub-item">Semana 01</a>
+        <a href="semana02.html" class="sub-item">Semana 02</a>
+        <a href="semana03.html" class="sub-item">Semana 03</a>
+        <a href="semana04.html" class="sub-item">Semana 04</a>
+        <a href="semana05.html" class="sub-item">Semana 05</a>
+        <a href="semana06.html" class="sub-item">Semana 06</a>
+        <a href="semana07.html" class="sub-item">Semana 07</a>
+        <a href="semana08.html" class="sub-item">Semana 08</a>
+        <a href="semana09.html" class="sub-item">Semana 09</a>
+        <a href="semana10.html" class="sub-item">Semana 10</a>
+        <a href="semana11.html" class="sub-item">Semana 11</a>
+        <a href="semana12.html" class="sub-item">Semana 12</a>
+        <a href="semana13.html" class="sub-item">Semana 13</a>
+        <a href="semana14.html" class="sub-item">Semana 14</a>
+        <a href="semana15.html" class="sub-item">Semana 15</a>
+        <a href="semana16.html" class="sub-item">Semana 16</a>
+    </div>
+    <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
+</div>
+
+<!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+<div class="floating-menu" onclick="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"/>
+    </svg>
+</div>
+
+<!-- Contenido principal -->
+<div id="mainContent" class="content">
+    <!-- Introducción a Flutter -->
+    <section class="flutter-section container mt-5">
+        <h2>Introducción a Flutter</h2>
+        <p>Flutter es un framework de código abierto creado por Google, que permite desarrollar aplicaciones nativas multiplataforma utilizando un solo código base. Es especialmente popular por su alto rendimiento y la capacidad de crear interfaces de usuario atractivas y personalizadas para Android, iOS, web y escritorio.</p>
+
+        <!-- Ejemplo de código en Dart -->
+        <h3>Ejemplo de Hola Mundo en Dart</h3>
+        <pre><code>
+            void main() {
+                print("Hola Mundo");
+              }      
+        </code></pre>
+
+        <!-- Botón para abrir el modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pdfModal">
+            Ver PDF
+        </button>
+    </section>
+</div>
+
+<!-- Modal para PDF -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">Descargar PDF</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Haz clic en el botón de abajo para descargar el archivo PDF.</p>
+                <a href="pdf/infografia.pdf" class="btn btn-success" download>Descargar PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/menu.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Ejercicios de Programación en Dart</title>
+    <style>
+        /* Encabezado */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sección de ejercicios */
+        .exercise-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el encabezado del código */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header-container h4 {
+            margin: 0;
+        }
+
+        .boton_gif {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .boton_gif:hover {
+            background-color: #0056b3;
+        }
+
+        /* Icono de copiar */
+        .icono-copiar {
+            cursor: pointer;
+            color: #28a745;
+            margin-left: 10px;
+        }
+
+        /* Estilo para el área de código */
+        pre {
+            background-color: #272b30;
+            /* Fondo del bloque de código */
+            color: #f8f9fa;
+            /* Color del texto del código */
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            /* Permite que el texto se ajuste al ancho */
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        /* Margen en secciones */
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú lateral con subcategorías -->
+    <div id="sideMenu" class="side-menu">
+        <a href="index.html">Inicio</a>
+        <!-- Subcategoría Semanas -->
+        <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+        <div class="collapse" id="subMenuServicios">
+            <a href="semana01.html" class="sub-item">Semana 01</a>
+            <a href="semana02.html" class="sub-item">Semana 02</a>
+            <a href="semana03.html" class="sub-item">Semana 03</a>
+            <a href="semana04.html" class="sub-item">Semana 04</a>
+            <a href="semana05.html" class="sub-item">Semana 05</a>
+            <a href="semana06.html" class="sub-item">Semana 06</a>
+            <a href="semana07.html" class="sub-item">Semana 07</a>
+            <a href="semana08.html" class="sub-item">Semana 08</a>
+            <a href="semana09.html" class="sub-item">Semana 09</a>
+            <a href="semana10.html" class="sub-item">Semana 10</a>
+            <a href="semana11.html" class="sub-item">Semana 11</a>
+            <a href="semana12.html" class="sub-item">Semana 12</a>
+            <a href="semana13.html" class="sub-item">Semana 13</a>
+            <a href="semana14.html" class="sub-item">Semana 14</a>
+            <a href="semana15.html" class="sub-item">Semana 15</a>
+            <a href="semana16.html" class="sub-item">Semana 16</a>
+        </div>
+        <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
+    </div>
+
+    <!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+    <div class="floating-menu" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+        </svg>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="mainContent" class="content">
+        <!-- Ejercicio 1 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejercicio 1:</h3>
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#pdfModal">
+                    Ver PDF
+                </button>
+            </div>
+            <p>
+                En una universidad, los alumnos están categorizados en cuatro categorías. A cada categoría le
+                corresponde una pensión mensual distinta dada en la siguiente tabla:
+            </p>
+            <div class="table-container">
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Pensión</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A</td>
+                            <td>S/. 550</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>S/. 500</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>S/. 460</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>S/. 400</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Semestralmente, la universidad efectúa rebajas en las pensiones de sus estudiantes a partir del segundo
+                ciclo en base al promedio ponderado del ciclo anterior en porcentajes dados en la tabla siguiente:
+            </p>
+            <div class="table-container">
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Nota Promedio</th>
+                            <th scope="col">Promedio Descuento</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0 A 13.99</td>
+                            <td>No hay descuento</td>
+                        </tr>
+                        <tr>
+                            <td>14.00 A 15.99</td>
+                            <td>10%</td>
+                        </tr>
+                        <tr>
+                            <td>16.00 A 17.99</td>
+                            <td>12%</td>
+                        </tr>
+                        <tr>
+                            <td>18.00 A 20.00</td>
+                            <td>15%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
+            </div>
+            <pre id="codigo1"><code>             
+            import 'dart:io';
+            void main() {
+              Map pensiones = {
+                'A': 550.0,
+                'B': 500.0,
+                'C': 460.0,
+                'D': 400.0,
+              };
+              Map descuentos = {
+                '0-13.99': 0.0,
+                '14.00-15.99': 0.10,
+                '16.00-17.99': 0.12,
+                '18.00-20.00': 0.15,
+              };
+              print("Ingrese su categoría (A, B, C, D): ");
+              String categoria = stdin.readLineSync()!.toUpperCase();
+              if (!pensiones.containsKey(categoria)) {
+                print("Categoría no válida.");
+                return;
+              }
+              print("Ingrese su promedio ponderado (0 a 20): ");
+              double promedio = double.parse(stdin.readLineSync()!);
+              if (promedio < 0 || promedio > 20) {
+                print("Promedio no válido. Debe estar entre 0 y 20.");
+                return;
+              }
+              double pensionActual = pensiones[categoria]!;
+              double descuento = 0.0;
+              if (promedio >= 0 && promedio < 14) {
+                descuento = descuentos['0-13.99']!;
+              } else if (promedio >= 14 && promedio < 16) {
+                descuento = descuentos['14.00-15.99']!;
+              } else if (promedio >= 16 && promedio < 18) {
+                descuento = descuentos['16.00-17.99']!;
+              } else {
+                descuento = descuentos['18.00-20.00']!;
+              }
+              double montoDescuento = pensionActual * descuento;
+              double nuevaPension = pensionActual - montoDescuento;
+              print("Pensión actual: S/. ${pensionActual.toStringAsFixed(2)}");
+              print("Descuento: S/. ${montoDescuento.toStringAsFixed(2)}");
+              print("Nueva pensión: S/. ${nuevaPension.toStringAsFixed(2)}");
+            }
+        </code></pre>
+        </section>
+
+        <!-- Ejercicio 2 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejercicio 2:</h3>
+            </div>
+            <p>
+                El ejército nacional ha decidido hacer una jornada de ventas de libretas militares para muchos hombres que no han definido su situación militar u otros que no son aptos para prestar el servicio. Además de la edad de joven, se tendrá en cuenta el nivel del sistema de beneficio de la persona. Para todos los hombres mayores de 18 años la libreta tendrá un costo de S/. 350, pero para aquellos que tengan nivel 1 se les hará un descuento del 40%; para los de nivel 2, el descuento será del 30%; para nivel 3 del 15%; y para los demás estratos o niveles no habrá descuento. Para los jóvenes con los 18 años la libreta tiene un costo de S/. 200 y los jóvenes con nivel del sistema de beneficio 1, tendrán un descuento del 60%; para los de nivel 2,descuento del 40%; para los del 3, un descuento del 20% y para los demás estratos no habrá descuento. Realizar una aplicación que tome la edad y el nivel del sistema de beneficio de un hombre y nos muestre descuento que le hacen y su valor final a pagar.
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo2')">📋</span>
+            </div>
+            <pre id="codigo2"><code>  
+                import 'dart:io';
+                void main() {
+                  double precioMayorDe18 = 350.0;
+                  double precioMenorOIgual18 = 200.0;
+                  print("Ingrese su edad: ");
+                  int edad = int.parse(stdin.readLineSync()!);
+                  print("Ingrese su nivel del sistema de beneficio (1, 2, 3 o 4): ");
+                  int nivel = int.parse(stdin.readLineSync()!);
+                  double precioFinal;
+                  double descuento;
+                  if (edad > 18) {
+                    precioFinal = precioMayorDe18;
+                    switch (nivel) {
+                      case 1:
+                        descuento = 0.40;
+                        break;
+                      case 2:
+                        descuento = 0.30;
+                        break;
+                      case 3:
+                        descuento = 0.15;
+                        break;
+                      default:
+                        descuento = 0.0;
+                    }
+                  } else if (edad == 18) {
+                    precioFinal = precioMenorOIgual18;
+                    switch (nivel) {
+                      case 1:
+                        descuento = 0.60;
+                        break;
+                      case 2:
+                        descuento = 0.40;
+                        break;
+                      case 3:
+                        descuento = 0.20;
+                        break;
+                      default:
+                        descuento = 0.0;
+                    }
+                  } else {
+                    print("Edad no válida. Debe ser mayor o igual a 18.");
+                    return;
+                  }
+                  double montoDescuento = precioFinal * descuento;
+                  double precioConDescuento = precioFinal - montoDescuento;
+                  print("Precio original: S/. ${precioFinal.toStringAsFixed(2)}");
+                  print("Descuento aplicado: S/. ${montoDescuento.toStringAsFixed(2)}");
+                  print("Precio final a pagar: S/. ${precioConDescuento.toStringAsFixed(2)}");
+                }                                       
+        </code></pre>
+        </section>
+
+        <!-- Ejercicio 3 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejercicio 3:</h3>
+            </div>
+            <p>
+                Los cálculos salariales de los vendedores de una empresa se calculan de la siguiente manera:
+            </p>
+            <div class="table-container">
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Concepto</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sueldo básico</td>
+                            <td>S/. 600</td>
+                        </tr>
+                        <tr>
+                            <td>Comisión</td>
+                            <td>
+                                <ul>
+                                    <li>7% del importe total vendido si es mayor a S/. 15,000</li>
+                                    <li>5% del importe total vendido si es menor o igual a S/. 15,000</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bonificación</td>
+                            <td>
+                                <ul>
+                                    <li>S/. 25 por cada hijo si el número de hijos es menor a 5</li>
+                                    <li>S/. 22 por cada hijo si el número de hijos es 5 o más</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sueldo bruto</td>
+                            <td>Suma del sueldo básico, la comisión y la bonificación</td>
+                        </tr>
+                        <tr>
+                            <td>Descuento</td>
+                            <td>
+                                <ul>
+                                    <li>15% del sueldo bruto si es mayor que S/. 3,500</li>
+                                    <li>11% del sueldo bruto si es menor o igual a S/. 3,500</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Sueldo neto</td>
+                            <td>Resta del sueldo bruto menos el descuento</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>
+                Dado el importe total vendido y el número de hijos de un vendedor, diseñe un programa que determine el sueldo básico, la comisión, la bonificación, el sueldo bruto, el descuento y el sueldo neto.
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo3')">📋</span>
+            </div>
+            <pre id="codigo3"><code>
+                import 'dart:io';
+                void main() {               
+                  const double sueldoBasico = 600.0;
+                  const double porcentajeComisionBaja = 0.05;
+                  const double porcentajeComisionAlta = 0.07;
+                  const double bonificacionBaja = 25.0;
+                  const double bonificacionAlta = 22.0;
+                  const double porcentajeDescuentoBajo = 0.11;
+                  const double porcentajeDescuentoAlto = 0.15;
+                  const double limiteComision = 15000.0;
+                  const double limiteSueldoBruto = 3500.0;
+                  print("Ingrese el importe total vendido: ");
+                  double importeVendido = double.parse(stdin.readLineSync()!);
+                  print("Ingrese el número de hijos: ");
+                  int numeroHijos = int.parse(stdin.readLineSync()!);
+                  double comision = (importeVendido > limiteComision)
+                      ? (importeVendido * porcentajeComisionAlta)
+                      : (importeVendido * porcentajeComisionBaja);
+                  double bonificacion = (numeroHijos < 5)
+                      ? (numeroHijos * bonificacionBaja)
+                      : (numeroHijos * bonificacionAlta);
+                  double sueldoBruto = sueldoBasico + comision + bonificacion;
+                  double descuento = (sueldoBruto > limiteSueldoBruto)
+                      ? (sueldoBruto * porcentajeDescuentoAlto)
+                      : (sueldoBruto * porcentajeDescuentoBajo);
+                  double sueldoNeto = sueldoBruto - descuento;
+                  print("Sueldo básico: S/. ${sueldoBasico.toStringAsFixed(2)}");
+                  print("Comisión: S/. ${comision.toStringAsFixed(2)}");
+                  print("Bonificación: S/. ${bonificacion.toStringAsFixed(2)}");
+                  print("Sueldo bruto: S/. ${sueldoBruto.toStringAsFixed(2)}");
+                  print("Descuento: S/. ${descuento.toStringAsFixed(2)}");
+                  print("Sueldo neto: S/. ${sueldoNeto.toStringAsFixed(2)}");
+                }                   
+        </code></pre>
+        </section>
+
+    </div>
+    <!-- Modal para PDF -->
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfModalLabel">Descargar PDF</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Haz clic en el botón de abajo para descargar el archivo PDF.</p>
+                    <a href="pdf/ejercicio_semana04.pdf" class="btn btn-success" download>Descargar PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript para la funcionalidad de copiar -->
+    <script>
+        function copyCode(id) {
+            const codeElement = document.getElementById(id);
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges(); // Desselecciona el texto
+            alert('Código copiado al portapapeles');
+        }
+
+        // Función para alternar el menú lateral
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+        }
+    </script>
+
+
+    <script src="js/menu.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
