@@ -1,57 +1,809 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Inicio Moderno</title>
+    <title>Ejercicios de Programación en Dart</title>
+    <style>
+        /* Encabezado */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sección de ejercicios */
+        .exercise-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el encabezado del código */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header-container h4 {
+            margin: 0;
+        }
+
+        .boton_gif {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .boton_gif:hover {
+            background-color: #0056b3;
+        }
+
+        /* Icono de copiar */
+        .icono-copiar {
+            cursor: pointer;
+            color: #28a745;
+            margin-left: 10px;
+        }
+
+        /* Estilo para el área de código */
+        pre {
+            background-color: #272b30;
+            /* Fondo del bloque de código */
+            color: #f8f9fa;
+            /* Color del texto del código */
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            /* Permite que el texto se ajuste al ancho */
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        /* Margen en secciones */
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        h3 {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
- <!-- Menú lateral con subcategorías -->
-<div id="sideMenu" class="side-menu">
-    <a href="index.html">Inicio</a>
-    <!-- Subcategoría Semanas -->
-    <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
-    <div class="collapse" id="subMenuServicios">
-        <a href="semana01.html" class="sub-item">Semana 01</a>
-        <a href="semana02.html" class="sub-item">Semana 02</a>
-        <a href="semana03.html" class="sub-item">Semana 03</a>
-        <a href="semana04.html" class="sub-item">Semana 04</a>
-        <a href="semana05.html" class="sub-item">Semana 05</a>
-        <a href="semana06.html" class="sub-item">Semana 06</a>
-        <a href="semana07.html" class="sub-item">Semana 07</a>
-        <a href="semana08.html" class="sub-item">Semana 08</a>
-        <a href="semana09.html" class="sub-item">Semana 09</a>
-        <a href="semana10.html" class="sub-item">Semana 10</a>
-        <a href="semana11.html" class="sub-item">Semana 11</a>
-        <a href="semana12.html" class="sub-item">Semana 12</a>
-        <a href="semana13.html" class="sub-item">Semana 13</a>
-        <a href="semana14.html" class="sub-item">Semana 14</a>
-        <a href="semana15.html" class="sub-item">Semana 15</a>
-        <a href="semana16.html" class="sub-item">Semana 16</a>
+
+    <!-- Menú lateral con subcategorías -->
+    <div id="sideMenu" class="side-menu">
+        <a href="index.html">Inicio</a>
+        <!-- Subcategoría Semanas -->
+        <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+        <div class="collapse" id="subMenuServicios">
+            <a href="semana01.html" class="sub-item">Semana 01</a>
+            <a href="semana02.html" class="sub-item">Semana 02</a>
+            <a href="semana03.html" class="sub-item">Semana 03</a>
+            <a href="semana04.html" class="sub-item">Semana 04</a>
+            <a href="semana05.html" class="sub-item">Semana 05</a>
+            <a href="semana06.html" class="sub-item">Semana 06</a>
+            <a href="semana07.html" class="sub-item">Semana 07</a>
+            <a href="semana08.html" class="sub-item">Semana 08</a>
+            <a href="semana09.html" class="sub-item">Semana 09</a>
+            <a href="semana10.html" class="sub-item">Semana 10</a>
+            <a href="semana11.html" class="sub-item">Semana 11</a>
+            <a href="semana12.html" class="sub-item">Semana 12</a>
+            <a href="semana13.html" class="sub-item">Semana 13</a>
+            <a href="semana14.html" class="sub-item">Semana 14</a>
+            <a href="semana15.html" class="sub-item">Semana 15</a>
+            <a href="semana16.html" class="sub-item">Semana 16</a>
+        </div>
+        <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
     </div>
-    <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
-</div>
 
-<!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
-<div class="floating-menu" onclick="toggleMenu()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"/>
-    </svg>
-</div>
+    <!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+    <div class="floating-menu" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+        </svg>
+    </div>
 
-<!-- Contenido principal 
-<div id="mainContent" class="content">
-    <section class="main-section container text-center">
-        <h1>Bienvenidos a mi página web</h1>
-        <p class="lead">Soy Brad Andrew Flores Olivares, diseñador y programador especializado en el desarrollo de sitios web modernos y personalizados.</p>
-        <button class="btn-custom">Contáctame</button>
-    </section>
-</div>
--->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/menu.js"></script>
+    <!-- Contenido principal -->
+    <div id="mainContent" class="content">
+        <!-- Ejercicio 1 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Proyecto 01:</h3>
+            </div>
+            <p>
+                En una universidad, los alumnos están clasificados en cuatro categorías. A cada categoría le
+                corresponde una pensión mensual distinta dada en la siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Pensión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A</td>
+                        <td>S/. 550</td>
+                    </tr>
+                    <tr>
+                        <td>B</td>
+                        <td>S/. 500</td>
+                    </tr>
+                    <tr>
+                        <td>C</td>
+                        <td>S/. 460</td>
+                    </tr>
+                    <tr>
+                        <td>D</td>
+                        <td>S/. 400</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Semestralmente, la universidad efectúa rebajas en las pensiones de sus estudiantes a partir del
+                segundo ciclo basándose en el promedio ponderado del ciclo anterior en porcentajes dados en
+                la tabla siguiente:     
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Promedio</th>
+                        <th>Descuento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0 a 13.99</td>
+                        <td>No hay descuento</td>
+                    </tr>
+                    <tr>
+                        <td>14.00 a 15.99</td>
+                        <td>10 %</td>
+                    </tr>
+                    <tr>
+                        <td>16.00 a 17.99</td>
+                        <td>12 %</td>
+                    </tr>
+                    <tr>
+                        <td>18.00 a 20.00</td>
+                        <td>15 %</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Dado el promedio ponderado y la categoría de un estudiante, diseñe un programa que determine
+                cuánto de rebaja recibirá sobre su pensión actual y a cuánto asciende su nueva pensión      
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/semana07_proyecto01.dart" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
+            </div>
+            <pre id="codigo1">
+                <code>             
+                    import 'dart:io';
+                    class Categoria {
+                      String nombre;
+                      double pension;
+                    
+                      Categoria(this.nombre, this.pension);
+                    }
+                    class Estudiante {
+                      String nombre;
+                      Categoria categoria;
+                      double promedio;
+                    
+                      Estudiante(this.nombre, this.categoria, this.promedio);
+                    
+                      double calcularDescuento() {
+                        if (promedio < 14.0) {
+                          return 0.0;
+                        } else if (promedio < 16.0) {
+                          return 0.10;
+                        } else if (promedio < 18.0) {
+                          return 0.12;
+                        } else {
+                          return 0.15;
+                        }
+                      }
+                      double nuevaPension() {
+                        double descuento = calcularDescuento();
+                        return categoria.pension * (1 - descuento);
+                      }
+                    }
+                    void main() {
+                      // Definimos las categorías
+                      Categoria categoriaA = Categoria('A', 550);
+                      Categoria categoriaB = Categoria('B', 500);
+                      Categoria categoriaC = Categoria('C', 460);
+                      Categoria categoriaD = Categoria('D', 400);
+                      print('Ingrese el nombre del estudiante:');
+                      String nombre = stdin.readLineSync() ?? '';
+                      print('Ingrese la categoría del estudiante (A, B, C, D):');
+                      String categoriaInput = stdin.readLineSync()?.toUpperCase() ?? '';
+                      Categoria categoria;
+                      switch (categoriaInput) {
+                        case 'A':
+                          categoria = categoriaA;
+                          break;
+                        case 'B':
+                          categoria = categoriaB;
+                          break;
+                        case 'C':
+                          categoria = categoriaC;
+                          break;
+                        case 'D':
+                          categoria = categoriaD;
+                          break;
+                        default:
+                          print('Categoría no válida.');
+                          return;
+                      }
+                      print('Ingrese el promedio ponderado del estudiante:');
+                      double promedio = double.parse(stdin.readLineSync() ?? '0');
+                      Estudiante estudiante = Estudiante(nombre, categoria, promedio);
+                      double nuevaPension = estudiante.nuevaPension();
+                      double descuento = estudiante.calcularDescuento() * categoria.pension;
+                      print('Estudiante: ${estudiante.nombre}');
+                      print('Categoría: ${estudiante.categoria.nombre}');
+                      print('Pensión actual: S/. ${estudiante.categoria.pension}');
+                      print('Descuento: S/. ${descuento.toStringAsFixed(2)}');
+                      print('Nueva pensión: S/. ${nuevaPension.toStringAsFixed(2)}');
+                    }
+                    
+        </code>
+    </pre>
+        </section>
+
+        <!-- Ejercicio 2 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Proyecto 02:</h3>
+            </div>
+            <p>
+                Una empresa evalúa a sus empleados bajo dos criterios: puntualidad y rendimiento. En cada caso,
+            el empleado recibe un puntaje que va de 1 a 10, de acuerdo con los siguientes criterios:
+            <b>Puntaje por puntualidad:</b> - está en función de los minutos de tardanza de acuerdo con la
+            siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Minutos de Tardanza</th>
+                        <th>Puntaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1 a 2</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>3 a 5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>6 a 9</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Más de 9</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                <b>Puntaje por rendimiento:</b> - está en función de la cantidad de observaciones efectuadas al
+                empleado por no cumplir sus obligaciones de acuerdo con la siguiente tabla:     
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Observaciones Efectuadas</th>
+                        <th>Puntaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Más de 3</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                El puntaje total del empleado es la suma del puntaje por puntualidad más el puntaje por
+rendimiento. Basándose en el puntaje total, el empleado recibe una bonificación anual de acuerdo
+con la siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Puntaje Total</th>
+                        <th>Bonificación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Menos de 11</td>
+                        <td>S/. 2.5 por punto</td>
+                    </tr>
+                    <tr>
+                        <td>11 a 13</td>
+                        <td>S/. 5.0 por punto</td>
+                    </tr>
+                    <tr>
+                        <td>14 a 16</td>
+                        <td>S/. 7.5 por punto</td>
+                    </tr>
+                    <tr>
+                        <td>17 a 19</td>
+                        <td>S/. 10.0 por punto</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>S/. 12.5 por punto</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Dados los minutos de tardanza y el número de observaciones de un empleado, diseñe un
+programa que determine el puntaje por puntualidad, el puntaje por rendimiento, el puntaje total
+y la bonificación que le corresponden
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/semana07_proyecto02.dart" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo2')">📋</span>
+            </div>
+            <pre id="codigo2"><code>  
+                import 'dart:io';
+class Evaluacion {
+  int minutosTardanza;
+  int observaciones;
+  Evaluacion(this.minutosTardanza, this.observaciones);
+  int puntajePorPuntualidad() {
+    if (minutosTardanza == 0) {
+      return 10;
+    } else if (minutosTardanza <= 2) {
+      return 8;
+    } else if (minutosTardanza <= 5) {
+      return 6;
+    } else if (minutosTardanza <= 9) {
+      return 4;
+    } else {
+      return 0;
+    }
+  }
+  int puntajePorRendimiento() {
+    if (observaciones == 0) {
+      return 10;
+    } else if (observaciones == 1) {
+      return 8;
+    } else if (observaciones == 2) {
+      return 5;
+    } else if (observaciones == 3) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+  int puntajeTotal() {
+    return puntajePorPuntualidad() + puntajePorRendimiento();
+  }
+  double bonificacion() {
+    int total = puntajeTotal();
+    if (total < 11) {
+      return total * 2.5;
+    } else if (total <= 13) {
+      return total * 5.0;
+    } else if (total <= 16) {
+      return total * 7.5;
+    } else if (total <= 19) {
+      return total * 10.0;
+    } else {
+      return total * 12.5;
+    }
+  }
+}
+class Empleado {
+  String nombre;
+  Evaluacion evaluacion;
+  Empleado(this.nombre, this.evaluacion);
+}
+void main() {
+  print('Ingrese el nombre del empleado:');
+  String nombre = stdin.readLineSync() ?? '';
+  print('Ingrese los minutos de tardanza:');
+  int minutosTardanza = int.parse(stdin.readLineSync() ?? '0');
+  print('Ingrese el número de observaciones:');
+  int observaciones = int.parse(stdin.readLineSync() ?? '0');
+  Evaluacion evaluacion = Evaluacion(minutosTardanza, observaciones);
+  Empleado empleado = Empleado(nombre, evaluacion);
+  int puntajePuntualidad = evaluacion.puntajePorPuntualidad();
+  int puntajeRendimiento = evaluacion.puntajePorRendimiento();
+  int puntajeTotal = evaluacion.puntajeTotal();
+  double bonificacion = evaluacion.bonificacion();
+  print('Empleado: ${empleado.nombre}');
+  print('Puntaje por puntualidad: $puntajePuntualidad');
+  print('Puntaje por rendimiento: $puntajeRendimiento');
+  print('Puntaje total: $puntajeTotal');
+  print('Bonificación: S/. ${bonificacion.toStringAsFixed(2)}');
+}
+
+        </code></pre>
+        </section>
+
+        <!-- Ejercicio 3 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Proyecto 03:</h3>
+            </div>
+            <p>
+                Una dulcería vende chocolates a los precios dados en la siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Tipo de Chocolate</th>
+                        <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primor</td>
+                        <td>S/. 8.5</td>
+                    </tr>
+                    <tr>
+                        <td>Dulzura</td>
+                        <td>S/. 10.0</td>
+                    </tr>
+                    <tr>
+                        <td>Tentación</td>
+                        <td>S/. 7.0</td>
+                    </tr>
+                    <tr>
+                        <td>Explosión</td>
+                        <td>S/. 12.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Como oferta, la tienda aplica un porcentaje de descuento sobre el importe de la compra,
+                basándose en la cantidad de chocolates adquiridos, de acuerdo con la siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Cantidad de Chocolates</th>
+                        <th>Descuento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt; 5</td>
+                        <td>4.0%</td>
+                    </tr>
+                    <tr>
+                        <td>&ge; 5 y &lt; 10</td>
+                        <td>6.5%</td>
+                    </tr>
+                    <tr>
+                        <td>&ge; 10 y &lt; 15</td>
+                        <td>9.0%</td>
+                    </tr>
+                    <tr>
+                        <td>&ge; 15</td>
+                        <td>11.5%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Adicionalmente, si el importe a pagar es no menor de S/. 250, la tienda obsequia 3 caramelos por
+cada chocolate; en caso contrario, obsequia 2 caramelos por cada chocolate.
+Dado el tipo de chocolate y la cantidad de unidades adquiridas, diseñe un programa que
+determine el importe de la compra, el importe del descuento, el importe a pagar y la cantidad de
+caramelos de obsequio
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/semana07_proyecto03.dart" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo3')">📋</span>
+            </div>
+            <pre id="codigo3"><code>
+                import 'dart:io';
+                class Chocolate {
+                  String tipo;
+                  double precio;
+                
+                  Chocolate(this.tipo, this.precio);
+                }
+                class Compra {
+                  Chocolate chocolate;
+                  int cantidad;
+                
+                  Compra(this.chocolate, this.cantidad);
+                
+                  double calcularImporte() {
+                    return chocolate.precio * cantidad;
+                  }
+                  double calcularDescuento() {
+                    double importe = calcularImporte();
+                    double descuentoPorcentaje;
+                
+                    if (cantidad < 5) {
+                      descuentoPorcentaje = 0.04;
+                    } else if (cantidad < 10) {
+                      descuentoPorcentaje = 0.065;
+                    } else if (cantidad < 15) {
+                      descuentoPorcentaje = 0.09;
+                    } else {
+                      descuentoPorcentaje = 0.115;
+                    }
+                
+                    return importe * descuentoPorcentaje;
+                  }
+                  double importeAPagar() {
+                    double importe = calcularImporte();
+                    double descuento = calcularDescuento();
+                    return importe - descuento;
+                  }
+                  int cantidadCaramelos() {
+                    double importe = importeAPagar();
+                    int caramelosPorChocolate = importe >= 250 ? 3 : 2;
+                    return cantidad * caramelosPorChocolate;
+                  }
+                }
+                void main() {
+                  Chocolate primor = Chocolate('Primor', 8.5);
+                  Chocolate dulzura = Chocolate('Dulzura', 10.0);
+                  Chocolate tentacion = Chocolate('Tentación', 7.0);
+                  Chocolate explosion = Chocolate('Explosión', 12.5);
+                  print('Seleccione el tipo de chocolate:');
+                  print('1. Primor');
+                  print('2. Dulzura');
+                  print('3. Tentación');
+                  print('4. Explosión');
+                  int seleccion = int.parse(stdin.readLineSync() ?? '1');
+                  Chocolate chocolateSeleccionado;
+                  switch (seleccion) {
+                    case 1:
+                      chocolateSeleccionado = primor;
+                      break;
+                    case 2:
+                      chocolateSeleccionado = dulzura;
+                      break;
+                    case 3:
+                      chocolateSeleccionado = tentacion;
+                      break;
+                    case 4:
+                      chocolateSeleccionado = explosion;
+                      break;
+                    default:
+                      print('Selección no válida.');
+                      return;
+                  }
+                  print('Ingrese la cantidad de chocolates:');
+                  int cantidad = int.parse(stdin.readLineSync() ?? '0');
+                  Compra compra = Compra(chocolateSeleccionado, cantidad);
+                  double importe = compra.calcularImporte();
+                  double descuento = compra.calcularDescuento();
+                  double totalAPagar = compra.importeAPagar();
+                  int caramelos = compra.cantidadCaramelos();
+                  print('Tipo de chocolate: ${chocolateSeleccionado.tipo}');
+                  print('Importe total: S/. ${importe.toStringAsFixed(2)}');
+                  print('Descuento: S/. ${descuento.toStringAsFixed(2)}');
+                  print('Importe a pagar: S/. ${totalAPagar.toStringAsFixed(2)}');
+                  print('Cantidad de caramelos de obsequio: $caramelos');
+                }                
+        </code></pre>
+        </section>
+
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Proyecto 04:</h3>
+            </div>
+            <p>
+                Una tienda vende tres tipos de productos a los precios dados en la siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P1</td>
+                        <td>S/. 15.0</td>
+                    </tr>
+                    <tr>
+                        <td>P2</td>
+                        <td>S/. 17.5</td>
+                    </tr>
+                    <tr>
+                        <td>P3</td>
+                        <td>S/. 20.0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Como oferta la tienda ofrece un regalo de acuerdo con la siguiente tabla:
+            </p>
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Unidades Adquiridas</th>
+                        <th>Regalo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Menos de 26</td>
+                        <td>Un lapicero</td>
+                    </tr>
+                    <tr>
+                        <td>26 a 50</td>
+                        <td>Un cuaderno</td>
+                    </tr>
+                    <tr>
+                        <td>Más de 50</td>
+                        <td>Una agenda</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Dado el tipo de producto y la cantidad de unidades adquiridas, diseñe un programa que
+                determine el importe a pagar y el regalo.
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;"
+                    href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/semana6_actividad04.dart"
+                    target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo4')">📋</span>
+            </div>
+            <pre id="codigo4"><code>
+                import 'dart:io';
+                class Empleado {
+                  String categoria;
+                  double horasTrabajadas;
+                  int numeroHijos;
+                  Empleado(this.categoria, this.horasTrabajadas, this.numeroHijos);
+                }
+                class Sueldo {
+                  static const double tarifaA = 45.0;
+                  static const double tarifaB = 37.5;
+                  double calcularSueldoBasico(Empleado empleado) {
+                    double tarifaHoraria = empleado.categoria == 'A' ? tarifaA : tarifaB;
+                    return tarifaHoraria * empleado.horasTrabajadas;
+                  }
+                  double calcularSueldoBruto(Empleado empleado, Bonificacion bonificacion) {
+                    double sueldoBasico = calcularSueldoBasico(empleado);
+                    double bonificacionTotal = bonificacion.calcularBonificacion(empleado);
+                    return sueldoBasico + bonificacionTotal;
+                  }
+                }
+                class Bonificacion {
+                  static const double bonificacionPorHijoHasta3 = 40.5;
+                  static const double bonificacionPorHijoMasDe3 = 35.0;
+                  double calcularBonificacion(Empleado empleado) {
+                    if (empleado.numeroHijos <= 3) {
+                      return empleado.numeroHijos * bonificacionPorHijoHasta3;
+                    } else {
+                      return (3 * bonificacionPorHijoHasta3) +
+                          ((empleado.numeroHijos - 3) * bonificacionPorHijoMasDe3);
+                    }
+                  }
+                }
+                class Descuento {
+                  static const double porcentajeDescuentoAlto = 0.135;
+                  static const double porcentajeDescuentoBajo = 0.10;
+                  double calcularDescuento(double sueldoBruto) {
+                    if (sueldoBruto >= 3500) {
+                      return sueldoBruto * porcentajeDescuentoAlto;
+                    } else {
+                      return sueldoBruto * porcentajeDescuentoBajo;
+                    }
+                  }
+                }
+                class Boleta {
+                  void imprimirBoleta(Empleado empleado, Sueldo sueldo, Bonificacion bonificacion, Descuento descuento) {
+                    double sueldoBasico = sueldo.calcularSueldoBasico(empleado);
+                    double bonificacionTotal = bonificacion.calcularBonificacion(empleado);
+                    double sueldoBruto = sueldoBasico + bonificacionTotal;
+                    double descuentoTotal = descuento.calcularDescuento(sueldoBruto);
+                    double sueldoNeto = sueldoBruto - descuentoTotal;
+                    print("\n===== BOLETA DE SUELDO =====");
+                    print("Sueldo Básico: S/. ${sueldoBasico.toStringAsFixed(2)}");
+                    print("Bonificación por Hijos: S/. ${bonificacionTotal.toStringAsFixed(2)}");
+                    print("Sueldo Bruto: S/. ${sueldoBruto.toStringAsFixed(2)}");
+                    print("Descuento: S/. ${descuentoTotal.toStringAsFixed(2)}");
+                    print("Sueldo Neto: S/. ${sueldoNeto.toStringAsFixed(2)}");
+                    print("==============================");
+                  }
+                }
+                void main() {
+                  print("Ingrese la categoría del empleado (A o B):");
+                  String? categoria = stdin.readLineSync()?.toUpperCase();
+                  print("Ingrese las horas trabajadas:");
+                  double horasTrabajadas = double.tryParse(stdin.readLineSync()!) ?? 0.0;
+                  print("Ingrese el número de hijos:");
+                  int numeroHijos = int.tryParse(stdin.readLineSync()!) ?? 0;
+                  Empleado empleado = Empleado(categoria!, horasTrabajadas, numeroHijos);
+                  Sueldo sueldo = Sueldo();
+                  Bonificacion bonificacion = Bonificacion();
+                  Descuento descuento = Descuento();
+                  Boleta boleta = Boleta();
+                  boleta.imprimirBoleta(empleado, sueldo, bonificacion, descuento);
+                }
+                            
+        </code></pre>
+        </section>
+    </div>
+    <!-- JavaScript para la funcionalidad de copiar -->
+    <script>
+        function copyCode(id) {
+            const codeElement = document.getElementById(id);
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges(); // Desselecciona el texto
+            alert('Código copiado al portapapeles');
+        }
+
+        // Función para alternar el menú lateral
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+        }
+    </script>
+
+
+    <script src="js/menu.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
