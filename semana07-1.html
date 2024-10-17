@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Ejercicios de Programación en Dart</title>
+    <style>
+        /* Encabezado */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sección de ejercicios */
+        .exercise-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el encabezado del código */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header-container h4 {
+            margin: 0;
+        }
+
+        .boton_gif {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .boton_gif:hover {
+            background-color: #0056b3;
+        }
+
+        /* Icono de copiar */
+        .icono-copiar {
+            cursor: pointer;
+            color: #28a745;
+            margin-left: 10px;
+        }
+
+        /* Estilo para el área de código */
+        pre {
+            background-color: #272b30;
+            /* Fondo del bloque de código */
+            color: #f8f9fa;
+            /* Color del texto del código */
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            /* Permite que el texto se ajuste al ancho */
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        /* Margen en secciones */
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        h3 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Menú lateral con subcategorías -->
+<div id="sideMenu" class="side-menu">
+  <a href="index.html">Inicio</a>
+  <!-- Subcategoría Semanas -->
+  <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+  <div class="collapse" id="subMenuServicios">
+      <a href="semana01.html" class="sub-item">Semana 01</a>
+      <a href="semana02.html" class="sub-item">Semana 02</a>
+      <a href="semana03.html" class="sub-item">Semana 03</a>
+      <a href="semana04.html" class="sub-item">Semana 04</a>
+      <a href="semana05.html" class="sub-item">Semana 05</a>
+      <a href="#subMenuSemana06" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 06</a>
+      <div class="collapse" id="subMenuSemana06">
+          <a href="semana06-1.html" class="sub-sub-item">Semana 6 - 1</a>
+          <a href="semana06-2.html" class="sub-sub-item">Semana 6 - 2</a>
+      </div>
+      <a href="#subMenuSemana07" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 07</a>
+      <div class="collapse" id="subMenuSemana07">
+          <a href="semana07-1.html" class="sub-sub-item">Semana 7 - 1</a>
+          <a href="semana07-2.html" class="sub-sub-item">Semana 7 - 2</a>
+      </div>
+      <a href="semana08.html" class="sub-item">Semana 08</a>
+      <a href="semana09.html" class="sub-item">Semana 09</a>
+      <a href="semana10.html" class="sub-item">Semana 10</a>
+      <a href="semana11.html" class="sub-item">Semana 11</a>
+      <a href="semana12.html" class="sub-item">Semana 12</a>
+      <a href="semana13.html" class="sub-item">Semana 13</a>
+      <a href="semana14.html" class="sub-item">Semana 14</a>
+      <a href="semana15.html" class="sub-item">Semana 15</a>
+      <a href="semana16.html" class="sub-item">Semana 16</a>
+  </div>
+  <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
+</div>
+
+
+    <!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+    <div class="floating-menu" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+        </svg>
+    </div>
+
+    <!-- Contenido principal -->
+    <div id="mainContent" class="content">
+        <!-- Ejercicio 1 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejemplo 01:</h3>
+            </div>
+            <p>
+                Sin Ingresar Datos     
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/ejemplo01_semana07.dart" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
+            </div>
+            <pre id="codigo1">
+                <code>             
+                  class Estudiante {
+                    String codigo;
+                    String nombres;
+                    double nota1;
+                    double nota2;
+                  
+                    Estudiante(this.codigo, this.nombres, this.nota1, this.nota2);
+                  
+                    void mostrarInformacion() {
+                      print('Código : $codigo');
+                      print('Nombres : $nombres');
+                      print('Nota 1 : $nota1');
+                      print('Nota 2 : $nota2');
+                      print('Promedio: ${calcularPromedio()}');
+                    }
+                  
+                    double calcularPromedio() {
+                      return (nota1 + nota2) / 2; // Calcular el promedio
+                    }
+                  }
+                  
+                  void main() {
+                    List<Estudiante> listaEstudiante = [];
+                    listaEstudiante.add(Estudiante('001', 'Juan Pérez', 15.5, 17.8));
+                    listaEstudiante.add(Estudiante('002', 'Ana Gómez', 18.2, 19.5));
+                  
+                    for (var estudiante in listaEstudiante) {
+                      estudiante.mostrarInformacion();
+                      print('---');
+                    }
+                  }
+        </code>
+    </pre>
+        </section>
+
+        <!-- Ejercicio 2 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejemplo 02</h3>
+            </div>
+            <p>
+              Ingreso de datos mediente Teclado
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/ejemplo02_semana07.dart" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo2')">📋</span>
+            </div>
+            <pre id="codigo2"><code>  
+              import 'dart:io';
+
+              class Estudiante {
+                String codigo;
+                String nombres;
+                double nota1;
+                double nota2;
+              
+                Estudiante(this.codigo, this.nombres, this.nota1, this.nota2);
+              
+                void mostrarInformacion() {
+                  print('Código : $codigo');
+                  print('Nombres : $nombres');
+                  print('Nota 1 : $nota1');
+                  print('Nota 2 : $nota2');
+                  print('Promedio: ${calcularPromedio()}');
+                }
+              
+                double calcularPromedio() {
+                  return (nota1 + nota2) / 2; // Calcular el promedio
+                }
+              }
+              
+              void main() {
+                List<Estudiante> listaEstudiante = [];
+                
+                while (true) {
+                  print('Ingrese el código del estudiante (o "salir" para terminar):');
+                  String codigo = stdin.readLineSync() ?? '';
+                  if (codigo.toLowerCase() == 'salir') {
+                    break;
+                  }
+              
+                  print('Ingrese el nombre del estudiante:');
+                  String nombres = stdin.readLineSync() ?? '';
+              
+                  double nota1;
+                  while (true) {
+                    print('Ingrese la nota 1:');
+                    String? input = stdin.readLineSync();
+                    if (input != null) {
+                      try {
+                        nota1 = double.parse(input);
+                        break; // Salir del bucle si la conversión fue exitosa
+                      } catch (e) {
+                        print('Por favor, ingrese un número válido para la nota 1.');
+                      }
+                    }
+                  }
+              
+                  double nota2;
+                  while (true) {
+                    print('Ingrese la nota 2:');
+                    String? input = stdin.readLineSync();
+                    if (input != null) {
+                      try {
+                        nota2 = double.parse(input);
+                        break; // Salir del bucle si la conversión fue exitosa
+                      } catch (e) {
+                        print('Por favor, ingrese un número válido para la nota 2.');
+                      }
+                    }
+                  }
+              
+                  Estudiante nuevoEstudiante = Estudiante(codigo, nombres, nota1, nota2);
+                  listaEstudiante.add(nuevoEstudiante);
+                  
+                  // Mostrar información inmediatamente después de agregar
+                  nuevoEstudiante.mostrarInformacion();
+                  print('Estudiante agregado.');
+                  print('---');
+                }
+              
+                // Mostrar la información de los estudiantes ingresados
+                print('Resumen de estudiantes:');
+                for (var estudiante in listaEstudiante) {
+                  estudiante.mostrarInformacion();
+                  print('---');
+                }
+              }
+        </code></pre>
+        </section>
+
+        <!-- Ejercicio 3 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejemplo 03:</h3>
+            </div>
+            <p>
+                Entrada por teclado y usando metodos
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="https://github.com/BAFO240304/Programaci-n_de_Aplicaciones_M-viles/blob/main/dart/ejemplo03_semana07.dart" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo3')">📋</span>
+            </div>
+            <pre id="codigo3"><code>
+              import 'dart:io';
+              class Estudiante {
+                String codigo;
+                String nombres;
+                double nota1;
+                double nota2;
+                Estudiante(this.codigo, this.nombres, this.nota1, this.nota2);
+                void mostrarInformacion() {
+                  print('Código : $codigo');
+                  print('Nombres : $nombres');
+                  print('Nota 1 : $nota1');
+                  print('Nota 2 : $nota2');
+                  print('Promedio: ${calcularPromedio()}');
+                }
+              
+                double calcularPromedio() {
+                  return (nota1 + nota2) / 2;
+                }
+              }
+              void main() {
+                iniciarPrograma();
+              }
+              void iniciarPrograma() {
+                List<Estudiante> listaEstudiante = [];
+                while (true) {
+                  Estudiante? nuevoEstudiante = ingresarEstudiante();
+                  if (nuevoEstudiante == null) break;
+                  listaEstudiante.add(nuevoEstudiante);
+                  nuevoEstudiante.mostrarInformacion();
+                  print('Estudiante agregado.');
+                  print('---');
+                }
+                print('Resumen de estudiantes:');
+                for (var estudiante in listaEstudiante) {
+                  estudiante.mostrarInformacion();
+                  print('-----------------------');
+                }
+              }
+              Estudiante? ingresarEstudiante() {
+                String codigo;
+                while (true) {
+                  print('Ingrese el código del estudiante (o "salir" para terminar):');
+                  codigo = stdin.readLineSync() ?? '';
+                  if (codigo.toLowerCase() == 'salir') {
+                    return null;
+                  }
+                  if (validarCodigo(codigo)) {
+                    break;
+                  } else {
+                    print('El código debe ser numérico. Intente nuevamente.');
+                  }
+                }
+                String nombres;
+                while (true) {
+                  print('Ingrese el nombre del estudiante:');
+                  nombres = stdin.readLineSync() ?? '';
+                  if (validarNombre(nombres)) {
+                    break;
+                  } else {
+                    print('El nombre solo debe contener letras. Intente nuevamente.');
+                  }
+                }
+                double nota1 = ingresarNota('Ingrese la nota 1:');
+                double nota2 = ingresarNota('Ingrese la nota 2:');
+              
+                return Estudiante(codigo, nombres, nota1, nota2);
+              }
+              double ingresarNota(String mensaje) {
+                double nota;
+                while (true) {
+                  print(mensaje);
+                  String? input = stdin.readLineSync();
+                  if (input != null) {
+                    try {
+                      nota = double.parse(input);
+                      return nota; // Retorna la nota válida
+                    } catch (e) {
+                      print('Por favor, ingrese un número válido para la nota.');
+                    }
+                  }
+                }
+              }
+              
+              bool validarCodigo(String codigo) {
+                return int.tryParse(codigo) != null; 
+              }
+              
+              bool validarNombre(String nombre) {
+                return RegExp(r'^[a-zA-Z\s]+$').hasMatch(nombre);
+              }          
+        </code></pre>
+        </section>     
+    </div>
+    <!-- JavaScript para la funcionalidad de copiar -->
+    <script>
+        function copyCode(id) {
+            const codeElement = document.getElementById(id);
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges(); // Desselecciona el texto
+            alert('Código copiado al portapapeles');
+        }
+
+        // Función para alternar el menú lateral
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+        }
+    </script>
+
+
+    <script src="js/menu.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
