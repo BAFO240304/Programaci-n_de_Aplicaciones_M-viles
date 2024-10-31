@@ -1,67 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Inicio Moderno</title>
+    <title>Ejercicios de Programación en Dart</title>
+    <style>
+        /* Encabezado */
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Sección de ejercicios */
+        .exercise-section {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para el encabezado del código */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header-container h4 {
+            margin: 0;
+        }
+
+        .boton_gif {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .boton_gif:hover {
+            background-color: #0056b3;
+        }
+
+        /* Icono de copiar */
+        .icono-copiar {
+            cursor: pointer;
+            color: #28a745;
+            margin-left: 10px;
+        }
+
+        /* Estilo para el área de código */
+        pre {
+            background-color: #272b30;
+            /* Fondo del bloque de código */
+            color: #f8f9fa;
+            /* Color del texto del código */
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            padding: 15px;
+            overflow: auto;
+            white-space: pre-wrap;
+            /* Permite que el texto se ajuste al ancho */
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        /* Margen en secciones */
+        .mt-5 {
+            margin-top: 3rem !important;
+        }
+
+        h3 {
+            color: red;
+        }
+    </style>
 </head>
+
 <body>
- <!-- Menú lateral con subcategorías -->
- <div id="sideMenu" class="side-menu">
-    <a href="index.html">Inicio</a>
-    <!-- Subcategoría Semanas -->
-    <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
-    <div class="collapse" id="subMenuServicios">
-        <a href="semana01.html" class="sub-item">Semana 01</a>
-        <a href="semana02.html" class="sub-item">Semana 02</a>
-        <a href="semana03.html" class="sub-item">Semana 03</a>
-        <a href="semana04.html" class="sub-item">Semana 04</a>
-        <a href="semana05.html" class="sub-item">Semana 05</a>
-        <a href="#subMenuSemana06" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 06</a>
-        <div class="collapse" id="subMenuSemana06">
-            <a href="semana06-1.html" class="sub-sub-item">Semana 6 - 1</a>
-            <a href="semana06-2.html" class="sub-sub-item">Semana 6 - 2</a>
-        </div>
-        <a href="#subMenuSemana07" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 07</a>
-        <div class="collapse" id="subMenuSemana07">
-            <a href="semana07-1.html" class="sub-sub-item">Semana 7 - 1</a>
-            <a href="semana07-2.html" class="sub-sub-item">Semana 7 - 2</a>
-        </div>
-        <a href="semana08.html" class="sub-item">Semana 08</a>
-        <a href="semana09.html" class="sub-item">Semana 09</a>
-        <a href="semana10.html" class="sub-item">Semana 10</a>
-        <a href="semana11.html" class="sub-item">Semana 11</a>
-        <a href="semana12.html" class="sub-item">Semana 12</a>
-        <a href="semana13.html" class="sub-item">Semana 13</a>
-        <a href="semana14.html" class="sub-item">Semana 14</a>
-        <a href="semana15.html" class="sub-item">Semana 15</a>
-        <a href="semana16.html" class="sub-item">Semana 16</a>
-    </div>
-    <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
+
+    <!-- Menú lateral con subcategorías -->
+<div id="sideMenu" class="side-menu">
+  <a href="index.html">Inicio</a>
+  <!-- Subcategoría Semanas -->
+  <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+  <div class="collapse" id="subMenuServicios">
+      <a href="semana01.html" class="sub-item">Semana 01</a>
+      <a href="semana02.html" class="sub-item">Semana 02</a>
+      <a href="semana03.html" class="sub-item">Semana 03</a>
+      <a href="semana04.html" class="sub-item">Semana 04</a>
+      <a href="semana05.html" class="sub-item">Semana 05</a>
+      <a href="#subMenuSemana06" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 06</a>
+      <div class="collapse" id="subMenuSemana06">
+          <a href="semana06-1.html" class="sub-sub-item">Semana 6 - 1</a>
+          <a href="semana06-2.html" class="sub-sub-item">Semana 6 - 2</a>
+      </div>
+      <a href="#subMenuSemana07" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 07</a>
+      <div class="collapse" id="subMenuSemana07">
+          <a href="semana07-1.html" class="sub-sub-item">Semana 7 - 1</a>
+          <a href="semana07-2.html" class="sub-sub-item">Semana 7 - 2</a>
+      </div>
+      <a href="semana08.html" class="sub-item">Semana 08</a>
+      <a href="semana09.html" class="sub-item">Semana 09</a>
+      <a href="semana10.html" class="sub-item">Semana 10</a>
+      <a href="semana11.html" class="sub-item">Semana 11</a>
+      <a href="semana12.html" class="sub-item">Semana 12</a>
+      <a href="semana13.html" class="sub-item">Semana 13</a>
+      <a href="semana14.html" class="sub-item">Semana 14</a>
+      <a href="semana15.html" class="sub-item">Semana 15</a>
+      <a href="semana16.html" class="sub-item">Semana 16</a>
   </div>
-  
-
-
-<!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
-<div class="floating-menu" onclick="toggleMenu()">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z"/>
-    </svg>
+  <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
 </div>
 
-<!-- Contenido principal 
-<div id="mainContent" class="content">
-    <section class="main-section container text-center">
-        <h1>Bienvenidos a mi página web</h1>
-        <p class="lead">Soy Brad Andrew Flores Olivares, diseñador y programador especializado en el desarrollo de sitios web modernos y personalizados.</p>
-        <button class="btn-custom">Contáctame</button>
-    </section>
-</div>
--->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/menu.js"></script>
+
+    <!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+    <div class="floating-menu" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+        </svg>
+    </div>
+    <!-- Contenido principal -->
+    <div id="mainContent" class="content">
+        <!-- Ejercicio 1 -->
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejercicio 1:</h3>
+            </div>
+            <p>
+                Hacer un splash y al pasar pantalla poner tu nombre
+            </p>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
+            </div>
+            <pre id="codigo1">
+                <code>             
+                    import 'package:flutter/material.dart';
+import 'dart:async'; // Importa Timer
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Bienvenido',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const SplashScreen(),
+    );
+  }
+}
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Temporizador para navegar después de 5 segundos
+    Timer(const Duration(seconds: 5), () {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (context) => const MyHomePage(title: 'Bienvenido '),
+        ),
+      );
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      backgroundColor: Colors.deepPurple,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            // Usa un ícono en lugar de una imagen
+            Icon(
+              Icons.flutter_dash,
+              size: 100,
+              color: Colors.white,
+            ),
+            SizedBox(height: 20),
+            Text(
+              'Bienvenido a mi flutter!',
+              style: TextStyle(color: Colors.white, fontSize: 24),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body: const Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Flores Olivares Brad Andrew', style: TextStyle(fontSize: 24)),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+        </code>
+    </pre>
+        </section>
+        <section class="exercise-section container mt-5">
+            <div class="header-container">
+                <h3>Ejercicio 2:</h3>
+            </div>
+            <p>
+                Hacer un Login Validando datos
+            </p>
+            <ul>
+                <li>
+                    Menu lateral
+                </li>
+                <li>
+                    Realizar 04 métodos que calculen área de figuras geometricas
+                </li>
+            </ul>
+            <br>
+            <div class="header-container">
+                <a style="text-decoration: none; color: #0056b3;" href="" target="_blank">Codigo en Gif Hub</a>
+                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
+            </div>
+            <pre id="codigo1">
+                <code>             
+                    
+        </code>
+    </pre>
+        </section>
+    </div>
+    <!-- JavaScript para la funcionalidad de copiar -->
+    <script>
+        function copyCode(id) {
+            const codeElement = document.getElementById(id);
+            const range = document.createRange();
+            range.selectNode(codeElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges(); // Desselecciona el texto
+            alert('Código copiado al portapapeles');
+        }
+
+        // Función para alternar el menú lateral
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('active');
+        }
+    </script>
+
+
+    <script src="js/menu.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
