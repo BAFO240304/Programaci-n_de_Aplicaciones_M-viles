@@ -2,111 +2,113 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <title>Ejercicios de Programación en Dart</title>
-    <style>
-        /* Encabezado */
-        h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <title>Ejercicios de Programación en Dart</title>
+  <style>
+    /* Encabezado */
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        /* Sección de ejercicios */
-        .exercise-section {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    /* Sección de ejercicios */
+    .exercise-section {
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        /* Estilos para el encabezado del código */
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
+    /* Estilos para el encabezado del código */
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
 
-        .header-container h4 {
-            margin: 0;
-        }
+    .header-container h4 {
+      margin: 0;
+    }
 
-        .boton_gif {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
+    .boton_gif {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
 
-        .boton_gif:hover {
-            background-color: #0056b3;
-        }
+    .boton_gif:hover {
+      background-color: #0056b3;
+    }
 
-        /* Icono de copiar */
-        .icono-copiar {
-            cursor: pointer;
-            color: #28a745;
-            margin-left: 10px;
-        }
+    /* Icono de copiar */
+    .icono-copiar {
+      cursor: pointer;
+      color: #28a745;
+      margin-left: 10px;
+    }
 
-        /* Estilo para el área de código */
-        pre {
-            background-color: #272b30;
-            /* Fondo del bloque de código */
-            color: #f8f9fa;
-            /* Color del texto del código */
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            padding: 15px;
-            overflow: auto;
-            white-space: pre-wrap;
-            /* Permite que el texto se ajuste al ancho */
-        }
+    /* Estilo para el área de código */
+    pre {
+      background-color: #272b30;
+      /* Fondo del bloque de código */
+      color: #f8f9fa;
+      /* Color del texto del código */
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      padding: 15px;
+      overflow: auto;
+      white-space: pre-wrap;
+      /* Permite que el texto se ajuste al ancho */
+    }
 
-        code {
-            font-family: 'Courier New', monospace;
-            color: #d63384;
-        }
+    code {
+      font-family: 'Courier New', monospace;
+      color: #d63384;
+    }
 
-        /* Margen en secciones */
-        .mt-5 {
-            margin-top: 3rem !important;
-        }
+    /* Margen en secciones */
+    .mt-5 {
+      margin-top: 3rem !important;
+    }
 
-        h3 {
-            color: red;
-        }
-    </style>
+    h3 {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- Menú lateral con subcategorías -->
-<div id="sideMenu" class="side-menu">
-  <a href="index.html">Inicio</a>
-  <!-- Subcategoría Semanas -->
-  <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
-  <div class="collapse" id="subMenuServicios">
+  <!-- Menú lateral con subcategorías -->
+  <div id="sideMenu" class="side-menu">
+    <a href="index.html">Inicio</a>
+    <!-- Subcategoría Semanas -->
+    <a href="#subMenuServicios" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Semanas</a>
+    <div class="collapse" id="subMenuServicios">
       <a href="semana01.html" class="sub-item">Semana 01</a>
       <a href="semana02.html" class="sub-item">Semana 02</a>
       <a href="semana03.html" class="sub-item">Semana 03</a>
       <a href="semana04.html" class="sub-item">Semana 04</a>
       <a href="semana05.html" class="sub-item">Semana 05</a>
-      <a href="#subMenuSemana06" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 06</a>
+      <a href="#subMenuSemana06" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana
+        06</a>
       <div class="collapse" id="subMenuSemana06">
-          <a href="semana06-1.html" class="sub-sub-item">Semana 6 - 1</a>
-          <a href="semana06-2.html" class="sub-sub-item">Semana 6 - 2</a>
+        <a href="semana06-1.html" class="sub-sub-item">Semana 6 - 1</a>
+        <a href="semana06-2.html" class="sub-sub-item">Semana 6 - 2</a>
       </div>
-      <a href="#subMenuSemana07" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana 07</a>
+      <a href="#subMenuSemana07" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle sub-item">Semana
+        07</a>
       <div class="collapse" id="subMenuSemana07">
-          <a href="semana07-1.html" class="sub-sub-item">Semana 7 - 1</a>
-          <a href="semana07-2.html" class="sub-sub-item">Semana 7 - 2</a>
+        <a href="semana07-1.html" class="sub-sub-item">Semana 7 - 1</a>
+        <a href="semana07-2.html" class="sub-sub-item">Semana 7 - 2</a>
       </div>
       <a href="semana08.html" class="sub-item">Semana 08</a>
       <a href="semana09.html" class="sub-item">Semana 09</a>
@@ -117,193 +119,104 @@
       <a href="semana14.html" class="sub-item">Semana 14</a>
       <a href="semana15.html" class="sub-item">Semana 15</a>
       <a href="semana16.html" class="sub-item">Semana 16</a>
+    </div>
+    <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
   </div>
-  <a href="https://www.hopp.bio/brad-andrew-flores-olivares" target="_blank">Perfil</a>
-</div>
+  <!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
+  <div class="floating-menu" onclick="toggleMenu()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
+    </svg>
+  </div>
+  <!-- Contenido principal -->
+  <div id="mainContent" class="content">
+    <!-- Ejercicio 1 -->
+    <section class="exercise-section container mt-5">
+      <div class="header-container">
+        <h3>Ejercicio 1:</h3>
+      </div>
+      <p>Hacer un splash y al pasar pantalla poner tu nombre</p>
+      <br>
+      <!-- Enlace al código -->
+      <div class="header-container mb-3">
+        <a style="text-decoration: none; color: #0056b3;" href="" target="_blank"> <svg xmlns="http://www.w3.org/2000/svg" width="1.12em" height="1em" viewBox="0 0 256 229"><path fill="#0066da" d="m19.354 196.034l11.29 19.5c2.346 4.106 5.718 7.332 9.677 9.678q17.009-21.591 23.68-33.137q6.77-11.717 16.641-36.655q-26.604-3.502-40.32-3.502q-13.165 0-40.322 3.502c0 4.545 1.173 9.09 3.519 13.196z"/><path fill="#ea4335" d="M215.681 225.212c3.96-2.346 7.332-5.572 9.677-9.677l4.692-8.064l22.434-38.855a26.57 26.57 0 0 0 3.518-13.196q-27.315-3.502-40.247-3.502q-13.899 0-40.248 3.502q9.754 25.075 16.422 36.655q6.724 11.683 23.752 33.137"/><path fill="#00832d" d="M128.001 73.311q19.68-23.768 27.125-36.655q5.996-10.377 13.196-33.137C164.363 1.173 159.818 0 155.126 0h-54.25C96.184 0 91.64 1.32 87.68 3.519q9.16 26.103 15.544 37.154q7.056 12.213 24.777 32.638"/><path fill="#2684fc" d="M175.36 155.42H80.642l-40.32 69.792c3.958 2.346 8.503 3.519 13.195 3.519h148.968c4.692 0 9.238-1.32 13.196-3.52z"/><path fill="#00ac47" d="M128.001 73.311L87.681 3.52c-3.96 2.346-7.332 5.571-9.678 9.677L3.519 142.224A26.57 26.57 0 0 0 0 155.42h80.642z"/><path fill="#ffba00" d="m215.242 77.71l-37.243-64.514c-2.345-4.106-5.718-7.331-9.677-9.677l-40.32 69.792l47.358 82.109h80.496c0-4.546-1.173-9.09-3.519-13.196z"/></svg> Codigo en Drive</a>
+      </div>
+      <!-- Imágenes -->
+      <div class="row">
+        <!-- Imagen 1 -->
+        <div class="col-md-4 mb-3">
+          <img src="img/splash.jpeg" class="img-fluid rounded border border-primary border-2"
+            alt="Descripción de la imagen 1">
+        </div>
+        <!-- Imagen 2 -->
+        <div class="col-md-4 mb-3">
+          <img src="img/nombre.jpeg" class="img-fluid rounded border border-primary border-2"
+            alt="Descripción de la imagen 2">
+        </div>
+      </div>
+    </section>
+  </div>
 
-
-    <!-- Menú flotante circular con icono de hamburguesa de Bootstrap -->
-    <div class="floating-menu" onclick="toggleMenu()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="white" class="bi bi-list"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M2.5 12.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm0-5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11z" />
-        </svg>
+  <section class="exercise-section container mt-5">
+    <div class="header-container">
+      <h3>Ejercicio 2:</h3>
     </div>
-    <!-- Contenido principal -->
-    <div id="mainContent" class="content">
-        <!-- Ejercicio 1 -->
-        <section class="exercise-section container mt-5">
-            <div class="header-container">
-                <h3>Ejercicio 1:</h3>
-            </div>
-            <p>
-                Hacer un splash y al pasar pantalla poner tu nombre
-            </p>
-            <br>
-            <div class="header-container">
-                <a style="text-decoration: none; color: #0056b3;" href="" target="_blank">Codigo en Gif Hub</a>
-                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
-            </div>
-            <pre id="codigo1">
-                <code>             
-                    import 'package:flutter/material.dart';
-import 'dart:async'; // Importa Timer
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bienvenido',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const SplashScreen(),
-    );
-  }
-}
-
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
-
-  @override
-  State<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    // Temporizador para navegar después de 5 segundos
-    Timer(const Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => const MyHomePage(title: 'Bienvenido '),
-        ),
-      );
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.deepPurple,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            // Usa un ícono en lugar de una imagen
-            Icon(
-              Icons.flutter_dash,
-              size: 100,
-              color: Colors.white,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Bienvenido a mi flutter!',
-              style: TextStyle(color: Colors.white, fontSize: 24),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Flores Olivares Brad Andrew', style: TextStyle(fontSize: 24)),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
-}
-
-        </code>
-    </pre>
-        </section>
-        <section class="exercise-section container mt-5">
-            <div class="header-container">
-                <h3>Ejercicio 2:</h3>
-            </div>
-            <p>
-                Hacer un Login Validando datos
-            </p>
-            <ul>
-                <li>
-                    Menu lateral
-                </li>
-                <li>
-                    Realizar 04 métodos que calculen área de figuras geometricas
-                </li>
-            </ul>
-            <br>
-            <div class="header-container">
-                <a style="text-decoration: none; color: #0056b3;" href="" target="_blank">Codigo en Gif Hub</a>
-                <span class="icono-copiar" onclick="copyCode('codigo1')">📋</span>
-            </div>
-            <pre id="codigo1">
-                <code>             
-                    
-        </code>
-    </pre>
-        </section>
+    <p>
+      Hacer un Login Validando datos
+    </p>
+    <ul>
+      <li>
+        Menu lateral
+      </li>
+      <li>
+        Realizar 04 métodos que calculen área de figuras geometricas
+      </li>
+    </ul>
+    <br>
+    <div class="header-container">
+      <a style="text-decoration: none; color: #0056b3;" href="" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="1.12em" height="1em" viewBox="0 0 256 229"><path fill="#0066da" d="m19.354 196.034l11.29 19.5c2.346 4.106 5.718 7.332 9.677 9.678q17.009-21.591 23.68-33.137q6.77-11.717 16.641-36.655q-26.604-3.502-40.32-3.502q-13.165 0-40.322 3.502c0 4.545 1.173 9.09 3.519 13.196z"/><path fill="#ea4335" d="M215.681 225.212c3.96-2.346 7.332-5.572 9.677-9.677l4.692-8.064l22.434-38.855a26.57 26.57 0 0 0 3.518-13.196q-27.315-3.502-40.247-3.502q-13.899 0-40.248 3.502q9.754 25.075 16.422 36.655q6.724 11.683 23.752 33.137"/><path fill="#00832d" d="M128.001 73.311q19.68-23.768 27.125-36.655q5.996-10.377 13.196-33.137C164.363 1.173 159.818 0 155.126 0h-54.25C96.184 0 91.64 1.32 87.68 3.519q9.16 26.103 15.544 37.154q7.056 12.213 24.777 32.638"/><path fill="#2684fc" d="M175.36 155.42H80.642l-40.32 69.792c3.958 2.346 8.503 3.519 13.195 3.519h148.968c4.692 0 9.238-1.32 13.196-3.52z"/><path fill="#00ac47" d="M128.001 73.311L87.681 3.52c-3.96 2.346-7.332 5.571-9.678 9.677L3.519 142.224A26.57 26.57 0 0 0 0 155.42h80.642z"/><path fill="#ffba00" d="m215.242 77.71l-37.243-64.514c-2.345-4.106-5.718-7.331-9.677-9.677l-40.32 69.792l47.358 82.109h80.496c0-4.546-1.173-9.09-3.519-13.196z"/></svg> Codigo en Drive</a>
     </div>
-    <!-- JavaScript para la funcionalidad de copiar -->
-    <script>
-        function copyCode(id) {
-            const codeElement = document.getElementById(id);
-            const range = document.createRange();
-            range.selectNode(codeElement);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            document.execCommand('copy');
-            window.getSelection().removeAllRanges(); // Desselecciona el texto
-            alert('Código copiado al portapapeles');
-        }
-
-        // Función para alternar el menú lateral
-        function toggleMenu() {
-            const sideMenu = document.getElementById('sideMenu');
-            sideMenu.classList.toggle('active');
-        }
-    </script>
-
-
-    <script src="js/menu.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <div class="row">
+      <!-- Imagen 1 -->
+      <div class="col-md-4 mb-3">
+        <img src="img/splash.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 1">
+      </div>
+      <!-- Imagen 2 -->
+      <div class="col-md-4 mb-3">
+        <img src="img/login_semana8.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="img/bienvenida_semana08.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="img/menu_lateral_semana08.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="img/area_cuadrado.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="img/area_rectangulo.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="img/area_circulo.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+      <div class="col-md-4 mb-3">
+        <img src="img/area_triangulo.jpeg" class="img-fluid rounded border border-primary border-2"
+          alt="Descripción de la imagen 2">
+      </div>
+    </div>
+  </section>
+  </div>
+  <script src="js/menu.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
